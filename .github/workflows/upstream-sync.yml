@@ -23,12 +23,15 @@ on:
         required: true
 
 permissions:
-  contents: write
-  pull-requests: write
+  contents: read
 
 jobs:
-  sync:
+  build:
     runs-on: ubuntu-latest
+    outputs:
+      changed: ${{ steps.merge.outputs.changed }}
+      target_sha: ${{ steps.merge.outputs.target_sha }}
+      upstream_sha: ${{ steps.merge.outputs.upstream_sha }}
     steps:
       - uses: actions/checkout@v7
         with:
@@ -49,6 +52,7 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git fetch origin "$TARGET_BRANCH:refs/remotes/origin/$TARGET_BRANCH"
           git switch --detach "origin/$TARGET_BRANCH"
+          echo "target_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
           git switch --create "$SYNC_BRANCH"
           git fetch --no-tags "https://github.com/$UPSTREAM_REPO.git" "$UPSTREAM_BRANCH"
           upstream_sha=$(git rev-parse FETCH_HEAD)
@@ -86,18 +90,46 @@ jobs:
           set -euo pipefail
           bash -euo pipefail -c "$BUILD_COMMAND"
 
-      - name: Push the reviewed sync branch and open a pull request
-        if: steps.merge.outputs.changed == 'true'
+  publish:
+    needs: build
+    if: needs.build.outputs.changed == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Recreate the verified merge and open a pull request
         env:
           GH_TOKEN: ${{ github.token }}
           TARGET_BRANCH: ${{ inputs.target_branch }}
           UPSTREAM_REPO: ${{ inputs.upstream_repo }}
           UPSTREAM_BRANCH: ${{ inputs.upstream_branch }}
-          UPSTREAM_SHA: ${{ steps.merge.outputs.upstream_sha }}
+          TARGET_SHA: ${{ needs.build.outputs.target_sha }}
+          UPSTREAM_SHA: ${{ needs.build.outputs.upstream_sha }}
           SYNC_BRANCH: automation/upstream-sync
         shell: bash
         run: |
           set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git fetch origin "$TARGET_BRANCH:refs/remotes/origin/$TARGET_BRANCH"
+          if [ "$(git rev-parse "origin/$TARGET_BRANCH")" != "$TARGET_SHA" ]; then
+            echo "The Folia branch changed after the build; rerun the sync before publishing." >&2
+            exit 1
+          fi
+          git switch --detach "origin/$TARGET_BRANCH"
+          git switch --create "$SYNC_BRANCH"
+          git fetch --no-tags "https://github.com/$UPSTREAM_REPO.git" "$UPSTREAM_SHA"
+          if [ "$(git rev-parse FETCH_HEAD)" != "$UPSTREAM_SHA" ]; then
+            echo "Fetched upstream commit does not match the commit that passed the build." >&2
+            exit 1
+          fi
+          git merge --no-ff --no-edit FETCH_HEAD
           gh auth setup-git
           if expected=$(git ls-remote origin "refs/heads/$SYNC_BRANCH" | awk 'NR == 1 { print $1 }') && [ -n "$expected" ]; then
             git push --force-with-lease="refs/heads/$SYNC_BRANCH:$expected" origin "HEAD:refs/heads/$SYNC_BRANCH"

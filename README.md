@@ -34,4 +34,6 @@ Use the fork's **Releases** page for experimental prereleases. Development build
 
 We track changes from official upstream, carry Folia-specific patches in separate development branches, and build on GitHub-hosted Actions. The daily workflow records upstream default-branch SHAs. Configured forks use a reusable daily sync workflow that merges upstream changes into a review branch and opens a pull request only after the repository build passes. It targets the Folia branch when one exists, otherwise the fork's default branch. It never merges or deploys. Updates with conflicts or unsafe entity/world interactions still require manual review.
 
+The sync workflow builds upstream changes in a read-only job, then recreates the verified merge on a fresh runner with PR-write permission. Pull requests still need a human review; enabling Actions approval permission at the organization level does not make a successful build proof of Folia safety.
+
 Project issue reports should include: plugin and build SHA, Folia/Minecraft version, startup logs (redact secrets), steps to reproduce, and whether a player/world region was active when it failed. Contributions welcome under the upstream license.

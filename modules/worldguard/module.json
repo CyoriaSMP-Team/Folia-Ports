@@ -2,10 +2,10 @@
   "name": "WorldGuard",
   "slug": "worldguard",
   "type": "upstream-fork",
-  "state": "planned",
-  "installed_on_folia": false,
+  "state": "experimental",
+  "installed_on_folia": true,
   "source": "https://github.com/CyoriaSMP-Team/WorldGuard-Folia",
   "target": "Folia 1.21.11",
   "build_proves_folia_safety": false,
-  "notes": "WorldEdit startup deadlock patched in CI, pending test"
+  "notes": "WorldGuard-Folia 7.0.17+bb6504f enabled with WorldEdit 7.4.7-SNAPSHOT on Folia 1.21.11 build 14. The read-only /rg list -w world command returned its region listing. Region edits, player claims, and cross-region interactions remain untested."
 }

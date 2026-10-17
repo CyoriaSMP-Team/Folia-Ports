@@ -72,6 +72,7 @@ This registry is not a claim that every listed plugin is safe. **Runtime tests o
 | VotifierPlus | third-party | active | Yes | pending official source verification |
 | VotingPlugin | third-party | active | Yes | pending official source verification |
 | WorldEdit | third-party | active | Yes | pending official source verification |
+| WorldGuard | upstream-fork | experimental | Yes | [Code](https://github.com/CyoriaSMP-Team/WorldGuard-Folia) |
 | zAuctionHouse | third-party | active | Yes | pending official source verification |
 | zMenu | third-party | active | Yes | pending official source verification |
 | AxiomPaper | third-party | planned | No | pending official source verification |
@@ -116,10 +117,9 @@ This registry is not a claim that every listed plugin is safe. **Runtime tests o
 | skript-yaml | third-party | planned | No | pending official source verification |
 | Themis | third-party | planned | No | pending official source verification |
 | VirtualStorage | third-party | planned | No | pending official source verification |
-| WorldGuard | upstream-fork | planned | No | [Code](https://github.com/CyoriaSMP-Team/WorldGuard-Folia) |
 | WorldGuardExtraFlags | third-party | planned | No | pending official source verification |
 
-**Tracked modules: 114. Plugin JARs present: 70. Experimental/blocked: 14.**
+**Tracked modules: 114. Plugin JARs present: 71. Experimental/blocked: 15.**
 
 ### Rules
 - Prefer verified official Folia releases and retain original license/credits.

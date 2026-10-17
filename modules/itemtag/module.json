@@ -2,10 +2,10 @@
   "name": "ItemTag",
   "slug": "itemtag",
   "type": "upstream-fork",
-  "state": "blocked",
+  "state": "experimental",
   "installed_on_folia": true,
   "source": "https://github.com/CyoriaSMP-Team/ItemTag-Folia",
   "target": "Folia 1.21.11",
   "build_proves_folia_safety": false,
-  "notes": "Original 3.7.7 JAR is installed but disables itself on Folia at startup due to BukkitRunnable.runTaskTimer (NOT FUNCTIONAL). Official-source GPLv3 Folia scheduler patch is in Draft PR #1, CI pending; revised JAR not deployed and Folia flag withheld until ownership audit. ItemEdit dependency must be reviewed."
+  "notes": "Original ItemTag 3.7.7 remains installed but disables itself on Folia 1.21.11. CyoriaSMP-Team/ItemTag-Folia Draft PR #1 Maven CI passes; experimental test-only flagged build booted with ItemEdit 3.7.10 in localhost Folia staging, no real players or multi-region tests yet. Unflagged CI artifact is NOT deployed."
 }

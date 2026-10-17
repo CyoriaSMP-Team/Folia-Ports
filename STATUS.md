@@ -7,7 +7,7 @@ The CyoriaSMP server has switched engine; unsupported historical plugin JARs and
 ## Priority blockers
 
 1. Authentication: use upstream Folia-specific AuthMe build; verify chat/password/UUID/Bedrock handshakes.
-2. World management: Multiverse-Core has no verified Folia port yet.
+2. World management: the [official Folia support request](https://github.com/Multiverse/Multiverse-Core/issues/2901) remains on hold; our fork's world lifecycle is incomplete and must stay out of the live plugin path.
 3. Region claims: ProtectionStones port has unverified cross-region world changes. Keep protected access until tested.
 4. Economy: ExcellentEconomy, ExcellentCrates, ExcellentEnchants, tokens/rewards need compatible builds with data integrity.
 5. Custom core: CyoriaCore, CyoriaCycRuntime, AuthEyeLab and interactive/chat/TPA/Status modules require direct port.

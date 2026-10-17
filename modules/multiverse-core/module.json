@@ -7,5 +7,5 @@
   "source": "https://github.com/CyoriaSMP-Team/Multiverse-Core-Folia",
   "target": "Folia 1.21.11",
   "build_proves_folia_safety": false,
-  "notes": "Development CI passes 182 tests; still blocked by Folia dynamic world create/unload and synchronous load API semantics; not installed."
+  "notes": "Development CI passes 182 tests; world creation/unload and synchronous load APIs are not ownership-safe yet. Official upstream Folia request #2901 remains on hold. Not installed."
 }

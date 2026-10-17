@@ -7,5 +7,5 @@
   "source": "https://github.com/Hayston1001/FastLoginPlus",
   "target": "Folia 1.21.11",
   "build_proves_folia_safety": false,
-  "notes": ""
+  "notes": "With official ProtocolLib Spigot dev-build and Folia AuthMe 6.0.1, isolated startup and live Folia startup passed. Player login flows not yet integration-tested; whitelist enabled."
 }

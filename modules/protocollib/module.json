@@ -1,0 +1,11 @@
+{
+  "name": "ProtocolLib",
+  "slug": "protocollib",
+  "type": "official-folia",
+  "state": "active",
+  "installed_on_folia": true,
+  "source": "https://github.com/CyoriaSMP-Team/ProtocolLib-Folia/tree/folia/1.21.11",
+  "target": "Folia 1.21.11",
+  "build_proves_folia_safety": false,
+  "notes": "Actual installed binary is official dmulloy2 ProtocolLib-Spigot.jar dev-build 5.5.0-SNAPSHOT, not repackaged fork. Runtime loading verified with FastLoginPlus/AuthMe. Official Paper plugin asset targets API 26.2, incompatible with Folia 1.21.11."
+}

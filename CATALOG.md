@@ -37,7 +37,7 @@ This registry is not a claim that every listed plugin is safe. **Runtime tests o
 | Kalo | third-party | active | Yes | pending official source verification |
 | LuckPerms | third-party | active | Yes | pending official source verification |
 | MiniMOTD | third-party | active | Yes | pending official source verification |
-| MythicMobs | third-party | blocked | Yes | pending official source verification |
+| MythicMobs | official-folia | active | Yes | [Code](https://modrinth.com/plugin/mythicmobs/version/5.13.0) |
 | NBTAPI | third-party | active | Yes | pending official source verification |
 | nightcore | third-party | active | Yes | pending official source verification |
 | NOrder | third-party | active | Yes | pending official source verification |
@@ -50,6 +50,7 @@ This registry is not a claim that every listed plugin is safe. **Runtime tests o
 | PlayerPoints | third-party | active | Yes | pending official source verification |
 | PlayerWarps | third-party | active | Yes | pending official source verification |
 | PlugManX | third-party | active | Yes | pending official source verification |
+| ProtocolLib | official-folia | active | Yes | [Code](https://github.com/CyoriaSMP-Team/ProtocolLib-Folia/tree/folia/1.21.11) |
 | PvPManager | third-party | active | Yes | pending official source verification |
 | QSFindItemAddOn | third-party | active | Yes | pending official source verification |
 | QuickShop-Hikari | third-party | active | Yes | pending official source verification |
@@ -98,7 +99,7 @@ This registry is not a claim that every listed plugin is safe. **Runtime tests o
 | MimiVouchers | third-party | planned | No | pending official source verification |
 | Multiverse-Core | upstream-fork | experimental | No | [Code](https://github.com/CyoriaSMP-Team/Multiverse-Core-Folia) |
 | P2PSmokeTest | custom-public | planned | No | pending official source verification |
-| PetKuEngSus | upstream-fork | planned | No | [Code](https://github.com/CyoriaSMP-Team/PetKuEngSus) |
+| PetKuEngSus | upstream-fork | experimental | No | [Code](https://github.com/CyoriaSMP-Team/PetKuEngSus/tree/folia/1.21.11) |
 | PhatLoots | third-party | planned | No | pending official source verification |
 | ProtectionStones | upstream-fork | experimental | No | [Code](https://github.com/CyoriaSMP-Team/ProtectionStones-Folia) |
 | ProtectionStonesMenu | third-party | planned | No | pending official source verification |
@@ -117,7 +118,7 @@ This registry is not a claim that every listed plugin is safe. **Runtime tests o
 | WorldGuard | upstream-fork | planned | No | [Code](https://github.com/CyoriaSMP-Team/WorldGuard-Folia) |
 | WorldGuardExtraFlags | third-party | planned | No | pending official source verification |
 
-**Tracked modules: 112. Installed: 66. Experimental/blocked: 10.**
+**Tracked modules: 113. Installed: 67. Experimental/blocked: 10.**
 
 ### Rules
 - Prefer verified official Folia releases and retain original license/credits.

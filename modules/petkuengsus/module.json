@@ -2,10 +2,10 @@
   "name": "PetKuEngSus",
   "slug": "petkuengsus",
   "type": "upstream-fork",
-  "state": "planned",
+  "state": "experimental",
   "installed_on_folia": false,
-  "source": "https://github.com/CyoriaSMP-Team/PetKuEngSus",
+  "source": "https://github.com/CyoriaSMP-Team/PetKuEngSus/tree/folia/1.21.11",
   "target": "Folia 1.21.11",
   "build_proves_folia_safety": false,
-  "notes": "Folia support not declared"
+  "notes": "Folia scheduler source port, GitHub CI passed; world/entity integration testing not complete."
 }

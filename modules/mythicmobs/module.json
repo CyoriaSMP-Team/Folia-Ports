@@ -1,11 +1,11 @@
 {
   "name": "MythicMobs",
   "slug": "mythicmobs",
-  "type": "third-party",
-  "state": "blocked",
+  "type": "official-folia",
+  "state": "active",
   "installed_on_folia": true,
-  "source": "pending official source verification",
+  "source": "https://modrinth.com/plugin/mythicmobs/version/5.13.0",
   "target": "Folia 1.21.11",
   "build_proves_folia_safety": false,
-  "notes": ""
+  "notes": "Official 5.13.0 SHA-512-verified, isolated Folia 1.21.11 boot passed, live Folia log reports successfully loaded. Active mob spawn/skill behavior and multi-region safety not yet verified; 5.12.1 failed at BukkitScheduler.runTaskTimer."
 }

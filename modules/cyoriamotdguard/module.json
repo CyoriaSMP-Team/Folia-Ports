@@ -4,8 +4,8 @@
   "type": "third-party",
   "state": "experimental",
   "installed_on_folia": true,
-  "source": "https://github.com/CyoriaSMP-Team/CyoriaMOTDGuard-Folia/releases/tag/v1.0.2-folia.1",
+  "source": "https://github.com/CyoriaSMP-Team/CyoriaMOTDGuard-Folia/releases/tag/v1.0.3-folia.2",
   "target": "Folia 1.21.11",
   "build_proves_folia_safety": false,
-  "notes": "v1.0.2-folia.1 is published and installed; live startup, Java status protocol 774, and Geyser RakNet pong passed. One status client could not be mapped to a channel, so that client's routing remains unverified. BannerMOTDplus remains blocked; it is an optional soft dependency."
+  "notes": "v1.0.3-folia.2 is published and installed; CI and live startup passed. Local Java status requests for protocols 774 and 47 return 0/50; Paper's status API observed protocol 774. The management status probe uses protocol 127 and cannot expose its channel. BannerMOTDplus remains optional and is not installed."
 }

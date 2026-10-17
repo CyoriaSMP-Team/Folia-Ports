@@ -7,5 +7,5 @@
   "source": "https://modrinth.com/plugin/bannermotd",
   "target": "Folia 1.21.11",
   "build_proves_folia_safety": false,
-  "notes": "Local staged BannerMOTDPlus 2.0.0 matches the official Modrinth SHA-512. Its plugin.yml lacks folia-supported: true, which Folia requires. Modrinth marks the project ARR and lists Paper/Purpur/BungeeCord/Velocity, so do not patch or publish a derivative without maintainer permission. Targeted Tailscale filename and plugin metadata searches found no compatible source or JAR on reachable search targets."
+  "notes": "Found the official BannerMOTDPlus 2.0.0 JAR staged on Home Server; its SHA-512 matches the official Modrinth asset. Its plugin.yml lacks folia-supported: true, which Folia requires. A second staged cyoria-only-774 JAR is a modified copy with unknown provenance; both remain outside plugins. Modrinth marks the project ARR, and no source suitable for a Folia port was found on accessible Tailscale targets. Do not patch or publish a derivative without maintainer permission."
 }

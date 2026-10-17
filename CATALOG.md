@@ -17,7 +17,7 @@ This registry is not a claim that every listed plugin is safe. **Runtime tests o
 | CoreProtect | third-party | active | Yes | pending official source verification |
 | CyoriaCore | cyoria-private | experimental | Yes | private:CyoriaSMP-Team/CyoriaCore |
 | CyoriaInteractiveChat | custom-public | experimental | Yes | [Release](https://github.com/CyoriaSMP-Team/CyoriaInteractiveChat/releases/tag/v0.1.5-folia.1) |
-| CyoriaMOTDGuard | third-party | experimental | Yes | [Release](https://github.com/CyoriaSMP-Team/CyoriaMOTDGuard-Folia/releases/tag/v1.0.2-folia.1) |
+| CyoriaMOTDGuard | third-party | experimental | Yes | [Release](https://github.com/CyoriaSMP-Team/CyoriaMOTDGuard-Folia/releases/tag/v1.0.3-folia.2) |
 | DiscordSRV | third-party | active | Yes | pending official source verification |
 | DonutSell | third-party | active | Yes | pending official source verification |
 | DonutTools | third-party | active | Yes | pending official source verification |

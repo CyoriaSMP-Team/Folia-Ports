@@ -2,10 +2,10 @@
   "name": "CyoriaMOTDGuard",
   "slug": "cyoriamotdguard",
   "type": "third-party",
-  "state": "blocked",
+  "state": "experimental",
   "installed_on_folia": true,
-  "source": "installed JAR only; no source checkout located",
+  "source": "https://github.com/CyoriaSMP-Team/CyoriaMOTDGuard-Folia",
   "target": "Folia 1.21.11",
   "build_proves_folia_safety": false,
-  "notes": "Live Folia startup disables this plugin because its hard dependency BannerMOTDplus is absent. The official 2.0.0 dependency is staged locally but is not Folia-loadable as published because it lacks folia-supported: true."
+  "notes": "v1.0.2-folia.1 is published and installed; live startup, Java status protocol 774, and Geyser RakNet pong passed. One status client could not be mapped to a channel, so that client's routing remains unverified. BannerMOTDplus remains blocked; it is an optional soft dependency."
 }

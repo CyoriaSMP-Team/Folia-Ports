@@ -19,6 +19,12 @@ See [STATUS.md](STATUS.md) for current migration blockers and [CATALOG.md](CATAL
 | DeluxeMenus | [DeluxeMenus-Folia](https://github.com/CyoriaSMP-Team/DeluxeMenus-Folia) | Official fork, port pending |
 | DecentHolograms | [DecentHolograms](https://github.com/CyoriaSMP-Team/DecentHolograms) | Official fork, Folia port pending |
 
+## Other published plugins
+
+| Project | Repository | Current stage |
+|---|---|---|
+| CyoriaMOTDGuard | [CyoriaMOTDGuard-Folia](https://github.com/CyoriaSMP-Team/CyoriaMOTDGuard-Folia) | Experimental prerelease `v1.0.2-folia.1`; live Java and RakNet status checks passed; one status client channel remains unverified |
+
 ## Public installation builds
 
 The experimental branches use `folia/1.21.11`. Open the fork's **Actions → Folia 1.21.11 Build** page and download the development JAR artifact of a green run. **Never install a `*-sources.jar` or `*-javadoc.jar` as a plugin.** No automatic deployment onto public servers is configured.

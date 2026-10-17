@@ -13,7 +13,7 @@ This registry is not a claim that every listed plugin is safe. **Runtime tests o
 | BetterRTP | third-party | active | Yes | pending official source verification |
 | BetterTeams | third-party | active | Yes | pending official source verification |
 | CMI | third-party | active | Yes | pending official source verification |
-| CMILib | third-party | active | Yes | pending official source verification |
+| CMILib | third-party | active | Yes | [Official Zrips download](https://www.zrips.net/cmilib/) |
 | CoreProtect | third-party | active | Yes | pending official source verification |
 | CyoriaCore | cyoria-private | experimental | Yes | private:CyoriaSMP-Team/CyoriaCore |
 | CyoriaInteractiveChat | custom-public | experimental | Yes | [Release](https://github.com/CyoriaSMP-Team/CyoriaInteractiveChat/releases/tag/v0.1.5-folia.1) |

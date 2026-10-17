@@ -17,6 +17,13 @@ CyoriaSMP has switched engine. Unsupported historical plugin JARs and their conf
 
 Only install an artifact from a passing workflow after confirming plugin.yml explicitly supports Folia and running runtime smoke tests; folia-supported: true alone is insufficient.
 
+## Upstream sync automation (2026-10-18)
+
+- The shared workflow now builds untrusted upstream changes with read-only repository permissions, then recreates the exact merge on a fresh runner before using PR-write permission. It does not merge or deploy, and it leaves review to a human because build success does not verify Folia region safety.
+- Daily caller workflows are configured for WorldEdit, WorldGuard, ProtectionStones, Multiverse-Core, ItemTag, MoreFoWorld, FAWE, DeluxeMenus, and DecentHolograms. The WorldEdit caller was corrected to target `folia/1.21.11` instead of its upstream `version/7.4.x` branch.
+- The 2026-10-18 workflow-dispatch sweep passed on all nine repositories. Upstream changes opened/updated [WorldGuard PR #1](https://github.com/CyoriaSMP-Team/WorldGuard-Folia/pull/1), [MoreFoWorld PR #1](https://github.com/CyoriaSMP-Team/MoreFoWorld-Folia/pull/1), and [FAWE PR #2](https://github.com/CyoriaSMP-Team/FAWE-Folia/pull/2); the other six repositories had no source changes. These PRs are unmerged and still need a Folia-aware review.
+- The organization setting `can_approve_pull_request_reviews` is enabled while default workflow permissions remain read-only. The sync workflow does not use Actions to self-approve its bot-authored PRs.
+
 ## Latest live startup check (2026-10-18)
 
 - Folia 1.21.11 build 14 reached Done after the Sonar, MOTDGuard, and NightCore updates and the server reported online with 0 of 50 players; the current start count is 41.

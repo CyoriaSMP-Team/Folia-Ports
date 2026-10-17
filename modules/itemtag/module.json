@@ -7,5 +7,5 @@
   "source": "https://github.com/CyoriaSMP-Team/ItemTag-Folia",
   "target": "Folia 1.21.11",
   "build_proves_folia_safety": false,
-  "notes": "The original ItemTag 3.7.7 disabled itself on Folia 1.21.11. CyoriaSMP-Team/ItemTag-Folia CI passes; a test-only copy with temporary folia-supported metadata enabled at startup on live Folia with zero players, then the original JAR was restored. The published artifact stays unflagged; real-player and multi-region safety remain unverified."
+  "notes": "The original ItemTag 3.7.7 disabled itself on Folia 1.21.11. CI artifact itemtag-folia-development-12 (SHA-256 22cb926d56049f251547d8f552f920bd89964b24214c473acd3f3c6afb0467a5) is active with folia-supported metadata and logged a successful startup on Folia 1.21.11. The original JAR is retained for rollback. No player or multi-region behavior has been tested; the port remains experimental."
 }

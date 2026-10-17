@@ -82,7 +82,7 @@ This registry is not a claim that every listed plugin is safe. **Runtime tests o
 | ChatGames | third-party | planned | No | pending official source verification |
 | CyoriaAuthEyeLab | custom-public | planned | No | pending official source verification |
 | CyoriaCycRuntime | custom-public | planned | No | pending official source verification |
-| CyoriaInteractiveChat | custom-public | planned | No | pending official source verification |
+| CyoriaInteractiveChat | custom-public | experimental | Yes | [Release](https://github.com/CyoriaSMP-Team/CyoriaInteractiveChat/releases/tag/v0.1.5-folia.1) |
 | CyoriaStatusEmbed | custom-public | planned | No | pending official source verification |
 | CyoriaTPA | custom-public | planned | No | pending official source verification |
 | DailyRewards | third-party | planned | No | pending official source verification |
@@ -119,7 +119,7 @@ This registry is not a claim that every listed plugin is safe. **Runtime tests o
 | VirtualStorage | third-party | planned | No | pending official source verification |
 | WorldGuardExtraFlags | third-party | planned | No | pending official source verification |
 
-**Tracked modules: 114. Plugin JARs present: 71. Experimental/blocked: 15.**
+**Tracked modules: 114. Plugin JARs present: 72. Experimental/blocked: 16.**
 
 ### Rules
 - Prefer verified official Folia releases and retain original license/credits.

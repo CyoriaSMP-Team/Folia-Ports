@@ -24,6 +24,7 @@ See [STATUS.md](STATUS.md) for current migration blockers and [CATALOG.md](CATAL
 | Project | Repository | Current stage |
 |---|---|---|
 | CyoriaMOTDGuard | [CyoriaMOTDGuard-Folia](https://github.com/CyoriaSMP-Team/CyoriaMOTDGuard-Folia) | Experimental prerelease `v1.0.2-folia.1`; live Java and RakNet status checks passed; one status client channel remains unverified |
+| CyoriaInteractiveChat | [CyoriaInteractiveChat](https://github.com/CyoriaSMP-Team/CyoriaInteractiveChat) | Experimental prerelease `v0.1.5-folia.1`; CI and live startup passed; isolated Leaf chat/GUI flow passed; live Folia player interaction remains unverified |
 
 ## Public installation builds
 

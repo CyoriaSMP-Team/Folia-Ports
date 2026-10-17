@@ -7,7 +7,7 @@ The CyoriaSMP server has switched engine; unsupported historical plugin JARs and
 ## Priority blockers
 
 1. Authentication: use upstream Folia-specific AuthMe build; verify chat/password/UUID/Bedrock handshakes.
-2. World management: the [official Folia support request](https://github.com/Multiverse/Multiverse-Core/issues/2901) remains on hold. The Multiverse test fork is installed as an experimental build, but Folia 1.21.11's `CraftServer.createWorld(WorldCreator)` throws `UnsupportedOperationException`; the `lobby` world and its 19 FancyNpcs remain unavailable.
+2. World management: the [official Folia support request](https://github.com/Multiverse/Multiverse-Core/issues/2901) remains on hold. The Multiverse test fork is installed; its global-region config error is fixed, but Folia 1.21.11's `CraftServer.createWorld(WorldCreator)` still throws `UnsupportedOperationException`. The `lobby` world and its 19 FancyNpcs remain unavailable.
 3. Region claims: ProtectionStones port has unverified cross-region world changes. Keep protected access until tested.
 4. Economy: ExcellentEconomy, ExcellentCrates, ExcellentEnchants, tokens/rewards need compatible builds with data integrity.
 5. Custom core: CyoriaCore, CyoriaCycRuntime, AuthEyeLab and interactive/chat/TPA/Status modules require direct port.
@@ -20,5 +20,5 @@ Only install an Artifact from a passing workflow after confirming plugin.yml exp
 
 - Folia 1.21.11 build 14 reached `Done` and the server reported online; there were 0 players during the check.
 - The original ItemTag 3.7.7 failed to enable with an unsupported Bukkit scheduler call. The fork's CI artifact `itemtag-folia-development-12` is now active with `folia-supported: true`; it logged `ItemTag # Enabled (took 34 ms)` and the server reached `Done`. The original JAR is retained in rollback. This is startup-only; the port remains experimental.
-- Multiverse-Core CI artifact `folia-1.21.11-9` loaded but failed to autoload `lobby` at the unsupported Bukkit API call. The plugin also logged a global-region config error. `worlds.yml` and the 186 MB lobby folder still match their pre-test copies.
+- Multiverse-Core CI artifact `folia-1.21.11-12` (`cfe4362e18cc3dd8bb1df2881d9665eb8c0b6a2f7babc7751eb52ed08a3d0aba`) passed all 183 tests and is installed. After restart the server returned online with 0 players; the plugin enabled and the previous global-region config error was gone. `lobby` remains unloaded because Folia throws `UnsupportedOperationException` from `CraftServer.createWorld(WorldCreator)`, so FancyNpcs still skips its 19 lobby NPCs. `config.yml`, `worlds.yml`, `anchors.yml`, and the 186 MB lobby world match their saved copies.
 - FancyNpcs skipped all 19 saved NPCs because `lobby` was not loaded. No player gameplay or multi-region plugin interaction was verified in this check.

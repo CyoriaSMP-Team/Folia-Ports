@@ -97,7 +97,7 @@ This registry is not a claim that every listed plugin is safe. **Runtime tests o
 | FreeCoinFlip | third-party | planned | No | pending official source verification |
 | LagFixer | third-party | planned | No | pending official source verification |
 | MimiVouchers | third-party | planned | No | pending official source verification |
-| Multiverse-Core | upstream-fork | experimental | Yes | [Code](https://github.com/CyoriaSMP-Team/Multiverse-Core-Folia) |
+| Multiverse-Core | upstream-fork | blocked | Yes | [Code](https://github.com/CyoriaSMP-Team/Multiverse-Core-Folia); Folia world loading remains unsupported |
 | P2PSmokeTest | custom-public | planned | No | pending official source verification |
 | PetKuEngSus | upstream-fork | experimental | No | [Code](https://github.com/CyoriaSMP-Team/PetKuEngSus/tree/folia/1.21.11) |
 | PhatLoots | third-party | planned | No | pending official source verification |

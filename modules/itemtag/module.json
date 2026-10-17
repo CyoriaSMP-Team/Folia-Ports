@@ -7,5 +7,5 @@
   "source": "https://github.com/CyoriaSMP-Team/ItemTag-Folia",
   "target": "Folia 1.21.11",
   "build_proves_folia_safety": false,
-  "notes": "Original ItemTag 3.7.7 remains installed but disables itself on Folia 1.21.11. CyoriaSMP-Team/ItemTag-Folia Draft PR #1 Maven CI passes; experimental test-only flagged build booted with ItemEdit 3.7.10 in localhost Folia staging, no real players or multi-region tests yet. Unflagged CI artifact is NOT deployed."
+  "notes": "The original ItemTag 3.7.7 disabled itself on Folia 1.21.11. CyoriaSMP-Team/ItemTag-Folia CI passes; a test-only copy with temporary folia-supported metadata enabled at startup on live Folia with zero players, then the original JAR was restored. The published artifact stays unflagged; real-player and multi-region safety remain unverified."
 }

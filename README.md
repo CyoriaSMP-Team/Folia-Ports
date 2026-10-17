@@ -2,6 +2,8 @@
 
 Community-visible work on Minecraft **Folia 1.21.11** interoperability. Each plugin fork derives from its **official upstream**; GitHub forks preserve the original project's license, attribution, and history.
 
+See [STATUS.md](STATUS.md) for current migration blockers and [CATALOG.md](CATALOG.md) for the plugin JAR inventory and observed failures.
+
 **Important:** a green CI build is not certification of safe Folia region ownership. Check the `FOLIA_PORT_STATUS.md` in each fork and the open PRs before using a development artifact. Avoid enabling `folia-supported: true` until the port is actually safe.
 
 ## Official-upstream forks
@@ -23,6 +25,6 @@ The experimental branches use `folia/1.21.11`. Open the fork's **Actions → Fol
 
 ## Maintenance
 
-We track changes from official upstream, carry Folia-specific patches in separate development branches, and build on GitHub-hosted Actions. An automated daily upstream review has been configured; updates with unresolved merge conflicts, untested schedulers, or unsafe entity/world interactions are not automatically released.
+We track changes from official upstream, carry Folia-specific patches in separate development branches, and build on GitHub-hosted Actions. The daily workflow records upstream default-branch SHAs in the Actions summary; it does not sync forks or publish updates. Updates with unresolved merge conflicts, untested schedulers, or unsafe entity/world interactions are not automatically released.
 
 Project issue reports should include: plugin and build SHA, Folia/Minecraft version, startup logs (redact secrets), steps to reproduce, and whether a player/world region was active when it failed. Contributions welcome under the upstream license.

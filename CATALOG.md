@@ -1,8 +1,8 @@
 # CyoriaSMP Folia 1.21.11 module catalog
 
-This registry is not a claim that every listed plugin is safe. **Runtime tests outrank `folia-supported` flags and CI green checks.**
+This registry is not a claim that every listed plugin is safe. **Runtime tests outrank `folia-supported` flags and CI green checks.** The presence of a plugin JAR does not mean it enabled or works correctly.
 
-| Module | Type | Current state | On live Folia? | Source / work |
+| Module | Type | Current state | Plugin JAR present? | Source / work |
 |---|---|---|---|---|
 | ajLeaderboards | third-party | active | Yes | pending official source verification |
 | AuthMe | official-folia | active | Yes | [Code](https://github.com/AuthMe/AuthMeReloaded) |
@@ -118,7 +118,7 @@ This registry is not a claim that every listed plugin is safe. **Runtime tests o
 | WorldGuard | upstream-fork | planned | No | [Code](https://github.com/CyoriaSMP-Team/WorldGuard-Folia) |
 | WorldGuardExtraFlags | third-party | planned | No | pending official source verification |
 
-**Tracked modules: 113. Installed: 67. Experimental/blocked: 11.**
+**Tracked modules: 113. Plugin JARs present: 67. Experimental/blocked: 11.**
 
 ### Rules
 - Prefer verified official Folia releases and retain original license/credits.

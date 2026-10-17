@@ -15,3 +15,10 @@ The CyoriaSMP server has switched engine; unsupported historical plugin JARs and
 7. GUI and gameplay: DeluxeMenus, DecentHolograms, third-party mini-games and pet systems need test/port.
 
 Only install an Artifact from a passing workflow after confirming plugin.yml explicitly supports Folia and runtime smoke tests; `folia-supported: true` alone is insufficient.
+
+## Latest live startup check (2026-10-17)
+
+- Folia 1.21.11 build 14 reached `Done` and the server reported online; there were 0 players during the check.
+- The original ItemTag 3.7.7 failed to enable with an unsupported Bukkit scheduler call. A backed-up development JAR with a temporary Folia metadata flag logged `ItemTag # Enabled`; this was startup-only, and the original JAR was restored after the smoke test. The published port remains experimental and unflagged.
+- FancyNpcs skipped 19 saved NPCs because `lobby` was not loaded. The lobby world exists on disk and is in the retained Multiverse config, but no Multiverse-Core JAR is active. Its current Folia port is not safe to install yet.
+- No player gameplay or multi-region plugin interaction was verified in this check.

@@ -97,7 +97,8 @@ This registry is not a claim that every listed plugin is safe. **Runtime tests o
 | FreeCoinFlip | third-party | planned | No | pending official source verification |
 | LagFixer | third-party | planned | No | pending official source verification |
 | MimiVouchers | third-party | planned | No | pending official source verification |
-| Multiverse-Core | upstream-fork | blocked | Yes | [Code](https://github.com/CyoriaSMP-Team/Multiverse-Core-Folia); Folia world loading remains unsupported |
+| Multiverse-Core | upstream-fork | experimental | Yes | [Code](https://github.com/CyoriaSMP-Team/Multiverse-Core-Folia); lobby currently depends on MoreFoWorld |
+| MoreFoWorld | third-party | experimental | Yes | [Hangar release](https://hangar.papermc.io/Folia-Inquisitors/MoreFoWorld/versions/1.13.3); temporary internal-API world loader |
 | P2PSmokeTest | custom-public | planned | No | pending official source verification |
 | PetKuEngSus | upstream-fork | experimental | No | [Code](https://github.com/CyoriaSMP-Team/PetKuEngSus/tree/folia/1.21.11) |
 | PhatLoots | third-party | planned | No | pending official source verification |
@@ -118,7 +119,7 @@ This registry is not a claim that every listed plugin is safe. **Runtime tests o
 | WorldGuard | upstream-fork | planned | No | [Code](https://github.com/CyoriaSMP-Team/WorldGuard-Folia) |
 | WorldGuardExtraFlags | third-party | planned | No | pending official source verification |
 
-**Tracked modules: 113. Plugin JARs present: 68. Experimental/blocked: 11.**
+**Tracked modules: 114. Plugin JARs present: 69. Experimental/blocked: 12.**
 
 ### Rules
 - Prefer verified official Folia releases and retain original license/credits.

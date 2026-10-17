@@ -14,7 +14,7 @@ See [STATUS.md](STATUS.md) for current migration blockers and [CATALOG.md](CATAL
 | WorldGuard | [WorldGuard-Folia](https://github.com/CyoriaSMP-Team/WorldGuard-Folia) | CI passed, startup smoke-tested with WorldEdit; more region tests needed |
 | ProtectionStones | [ProtectionStones-Folia](https://github.com/CyoriaSMP-Team/ProtectionStones-Folia) | Experimental source, CI passed, **Folia flag not enabled** |
 | FastAsyncWorldEdit | [FAWE-Folia](https://github.com/CyoriaSMP-Team/FAWE-Folia) | Experimental source, CI passed, **Folia flag not enabled**; replaces WorldEdit |
-| Multiverse-Core | [Multiverse-Core-Folia](https://github.com/CyoriaSMP-Team/Multiverse-Core-Folia) | Official fork, port pending |
+| Multiverse-Core | [Multiverse-Core-Folia](https://github.com/CyoriaSMP-Team/Multiverse-Core-Folia) | Live smoke test failed: Folia throws from world creation API; lobby unavailable |
 | Skript | [Skript-Folia](https://github.com/CyoriaSMP-Team/Skript-Folia) | Official fork, port pending; CyoriaRuntime migration is another path |
 | DeluxeMenus | [DeluxeMenus-Folia](https://github.com/CyoriaSMP-Team/DeluxeMenus-Folia) | Official fork, port pending |
 | DecentHolograms | [DecentHolograms](https://github.com/CyoriaSMP-Team/DecentHolograms) | Official fork, Folia port pending |
@@ -25,6 +25,6 @@ The experimental branches use `folia/1.21.11`. Open the fork's **Actions → Fol
 
 ## Maintenance
 
-We track changes from official upstream, carry Folia-specific patches in separate development branches, and build on GitHub-hosted Actions. The daily workflow records upstream default-branch SHAs in the Actions summary; it does not sync forks or publish updates. Updates with unresolved merge conflicts, untested schedulers, or unsafe entity/world interactions are not automatically released.
+We track changes from official upstream, carry Folia-specific patches in separate development branches, and build on GitHub-hosted Actions. The daily workflow records upstream default-branch SHAs. Configured forks use a reusable daily sync workflow that merges upstream changes into a review branch and opens a pull request only after the repository build passes. It targets the Folia branch when one exists, otherwise the fork's default branch. It never merges or deploys. Updates with conflicts or unsafe entity/world interactions still require manual review.
 
 Project issue reports should include: plugin and build SHA, Folia/Minecraft version, startup logs (redact secrets), steps to reproduce, and whether a player/world region was active when it failed. Contributions welcome under the upstream license.

@@ -15,7 +15,7 @@ jobs:
         shell: bash
         run: |
           echo '# Official upstream heads' >> "$GITHUB_STEP_SUMMARY"
-          for repo in espidev/ProtectionStones EngineHub/WorldEdit EngineHub/WorldGuard IntellectualSites/FastAsyncWorldEdit Multiverse/Multiverse-Core SkriptLang/Skript HelpChat/DeluxeMenus DecentSoftware-eu/DecentHolograms; do
+          for repo in espidev/ProtectionStones EngineHub/WorldEdit EngineHub/WorldGuard IntellectualSites/FastAsyncWorldEdit Multiverse/Multiverse-Core SkriptLang/Skript HelpChat/DeluxeMenus DecentSoftware-eu/DecentHolograms emanondev/ItemTag; do
             branch=$(gh api "repos/$repo" --jq .default_branch)
             sha=$(gh api "repos/$repo/commits/$branch" --jq .sha)
             printf -- '- `%s` at `%s`: `%s`\n' "$repo" "$branch" "${sha:0:12}" >> "$GITHUB_STEP_SUMMARY"

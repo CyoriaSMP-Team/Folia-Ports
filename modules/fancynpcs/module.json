@@ -7,5 +7,5 @@
   "source": "pending official source verification",
   "target": "Folia 1.21.11",
   "build_proves_folia_safety": false,
-  "notes": "At the 2026-10-17 live Folia startup, 19 saved NPCs in lobby were skipped because that world was not loaded. The plugin JAR is present, but this feature is not healthy; Multiverse-Core is absent and its Folia port remains incomplete."
+  "notes": "At the 2026-10-17 live Folia startup, 19 saved NPCs in lobby were skipped because that world was not loaded. The experimental Multiverse-Core fork was installed but Folia 1.21.11 throws UnsupportedOperationException from CraftServer.createWorld(WorldCreator), so the world still cannot be loaded."
 }

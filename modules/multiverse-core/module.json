@@ -3,9 +3,9 @@
   "slug": "multiverse-core",
   "type": "upstream-fork",
   "state": "experimental",
-  "installed_on_folia": false,
+  "installed_on_folia": true,
   "source": "https://github.com/CyoriaSMP-Team/Multiverse-Core-Folia",
   "target": "Folia 1.21.11",
   "build_proves_folia_safety": false,
-  "notes": "Development CI passes 182 tests; world creation/unload and synchronous load APIs are not ownership-safe yet. Official upstream Folia request #2901 remains on hold. Not installed."
+  "notes": "Experimental artifact folia-1.21.11-9 (SHA-256 54a4a11f69087820c5594f371cca8c2a0ffbc72e705836082b8294c5af8da1f0) was tested live. It enabled but Folia 1.21.11 throws UnsupportedOperationException in CraftServer.createWorld(WorldCreator), so lobby failed to autoload and all 19 FancyNpcs remain skipped. worlds.yml and the lobby backup are unchanged. Do not count this as healthy."
 }

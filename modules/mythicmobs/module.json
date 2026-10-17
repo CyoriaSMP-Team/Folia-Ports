@@ -1,0 +1,11 @@
+{
+  "name": "MythicMobs",
+  "slug": "mythicmobs",
+  "type": "third-party",
+  "state": "blocked",
+  "installed_on_folia": true,
+  "source": "pending official source verification",
+  "target": "Folia 1.21.11",
+  "build_proves_folia_safety": false,
+  "notes": ""
+}

@@ -1,0 +1,11 @@
+{
+  "name": "ProtocolLib2PacketEvents",
+  "slug": "protocollib2packetevents",
+  "type": "upstream-fork",
+  "state": "planned",
+  "installed_on_folia": false,
+  "source": "https://github.com/CyoriaSMP-Team/ProtocolLib2PacketEvents",
+  "target": "Folia 1.21.11",
+  "build_proves_folia_safety": false,
+  "notes": "Folia support not declared"
+}

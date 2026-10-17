@@ -1,0 +1,11 @@
+{
+  "name": "CyoriaCore",
+  "slug": "cyoriacore",
+  "type": "cyoria-private",
+  "state": "planned",
+  "installed_on_folia": false,
+  "source": "private:CyoriaSMP-Team/CyoriaCore",
+  "target": "Folia 1.21.11",
+  "build_proves_folia_safety": false,
+  "notes": "Folia support not declared"
+}

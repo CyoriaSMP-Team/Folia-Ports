@@ -1,0 +1,11 @@
+{
+  "name": "NOrder",
+  "slug": "norder",
+  "type": "third-party",
+  "state": "active",
+  "installed_on_folia": true,
+  "source": "pending official source verification",
+  "target": "Folia 1.21.11",
+  "build_proves_folia_safety": false,
+  "notes": ""
+}

@@ -1,0 +1,11 @@
+{
+  "name": "Multiverse-Core",
+  "slug": "multiverse-core",
+  "type": "upstream-fork",
+  "state": "experimental",
+  "installed_on_folia": false,
+  "source": "https://github.com/CyoriaSMP-Team/Multiverse-Core-Folia",
+  "target": "Folia 1.21.11",
+  "build_proves_folia_safety": false,
+  "notes": "Folia support not declared"
+}

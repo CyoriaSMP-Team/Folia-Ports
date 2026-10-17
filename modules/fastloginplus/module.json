@@ -1,0 +1,11 @@
+{
+  "name": "FastLoginPlus",
+  "slug": "fastloginplus",
+  "type": "official-folia",
+  "state": "active",
+  "installed_on_folia": true,
+  "source": "https://github.com/Hayston1001/FastLoginPlus",
+  "target": "Folia 1.21.11",
+  "build_proves_folia_safety": false,
+  "notes": ""
+}

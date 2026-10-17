@@ -1,0 +1,11 @@
+{
+  "name": "PetKuEngSus",
+  "slug": "petkuengsus",
+  "type": "upstream-fork",
+  "state": "planned",
+  "installed_on_folia": false,
+  "source": "https://github.com/CyoriaSMP-Team/PetKuEngSus",
+  "target": "Folia 1.21.11",
+  "build_proves_folia_safety": false,
+  "notes": "Folia support not declared"
+}

@@ -1,0 +1,11 @@
+{
+  "name": "VirtualStorage",
+  "slug": "virtualstorage",
+  "type": "third-party",
+  "state": "planned",
+  "installed_on_folia": false,
+  "source": "pending official source verification",
+  "target": "Folia 1.21.11",
+  "build_proves_folia_safety": false,
+  "notes": "Folia support not declared"
+}

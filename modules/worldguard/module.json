@@ -1,0 +1,11 @@
+{
+  "name": "WorldGuard",
+  "slug": "worldguard",
+  "type": "upstream-fork",
+  "state": "planned",
+  "installed_on_folia": false,
+  "source": "https://github.com/CyoriaSMP-Team/WorldGuard-Folia",
+  "target": "Folia 1.21.11",
+  "build_proves_folia_safety": false,
+  "notes": "WorldEdit startup deadlock patched in CI, pending test"
+}

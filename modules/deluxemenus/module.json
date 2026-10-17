@@ -1,0 +1,11 @@
+{
+  "name": "DeluxeMenus",
+  "slug": "deluxemenus",
+  "type": "upstream-fork",
+  "state": "experimental",
+  "installed_on_folia": false,
+  "source": "https://github.com/CyoriaSMP-Team/DeluxeMenus-Folia",
+  "target": "Folia 1.21.11",
+  "build_proves_folia_safety": false,
+  "notes": "Folia support not declared"
+}

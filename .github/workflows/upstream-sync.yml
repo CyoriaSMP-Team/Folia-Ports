@@ -1,0 +1,114 @@
+name: Upstream sync review
+
+on:
+  workflow_call:
+    inputs:
+      upstream_repo:
+        type: string
+        required: true
+      upstream_branch:
+        type: string
+        required: true
+      target_branch:
+        type: string
+        required: true
+      java_version:
+        type: string
+        required: true
+      build_system:
+        type: string
+        required: true
+      build_command:
+        type: string
+        required: true
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: ${{ inputs.java_version }}
+          cache: ${{ inputs.build_system }}
+
+      - name: Merge upstream into the Folia branch
+        id: merge
+        env:
+          UPSTREAM_REPO: ${{ inputs.upstream_repo }}
+          UPSTREAM_BRANCH: ${{ inputs.upstream_branch }}
+          TARGET_BRANCH: ${{ inputs.target_branch }}
+          SYNC_BRANCH: automation/upstream-sync
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git fetch origin "$TARGET_BRANCH:refs/remotes/origin/$TARGET_BRANCH"
+          git switch --detach "origin/$TARGET_BRANCH"
+          git switch --create "$SYNC_BRANCH"
+          git fetch --no-tags "https://github.com/$UPSTREAM_REPO.git" "$UPSTREAM_BRANCH"
+          upstream_sha=$(git rev-parse FETCH_HEAD)
+          if ! git merge --no-ff --no-edit FETCH_HEAD; then
+            git merge --abort || true
+            {
+              echo '## Upstream sync needs manual conflict resolution'
+              echo "Could not merge $UPSTREAM_REPO/$UPSTREAM_BRANCH into $TARGET_BRANCH. No branch or pull request was changed."
+            } >> "$GITHUB_STEP_SUMMARY"
+            exit 1
+          fi
+          if [ "$(git rev-list --count "origin/$TARGET_BRANCH..HEAD")" -eq 0 ]; then
+            echo 'changed=false' >> "$GITHUB_OUTPUT"
+            echo "No upstream changes for $UPSTREAM_REPO/$UPSTREAM_BRANCH." >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+          echo "upstream_sha=$upstream_sha" >> "$GITHUB_OUTPUT"
+          echo "Merged $UPSTREAM_REPO/$UPSTREAM_BRANCH at $upstream_sha into $TARGET_BRANCH." >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Build and test the merged source
+        if: steps.merge.outputs.changed == 'true'
+        env:
+          BUILD_COMMAND: ${{ inputs.build_command }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          bash -euo pipefail -c "$BUILD_COMMAND"
+
+      - name: Push the reviewed sync branch and open a pull request
+        if: steps.merge.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TARGET_BRANCH: ${{ inputs.target_branch }}
+          UPSTREAM_REPO: ${{ inputs.upstream_repo }}
+          UPSTREAM_BRANCH: ${{ inputs.upstream_branch }}
+          UPSTREAM_SHA: ${{ steps.merge.outputs.upstream_sha }}
+          SYNC_BRANCH: automation/upstream-sync
+        shell: bash
+        run: |
+          set -euo pipefail
+          if expected=$(git ls-remote origin "refs/heads/$SYNC_BRANCH" | awk 'NR == 1 { print $1 }') && [ -n "$expected" ]; then
+            git push --force-with-lease="refs/heads/$SYNC_BRANCH:$expected" origin "HEAD:refs/heads/$SYNC_BRANCH"
+          else
+            git push origin "HEAD:refs/heads/$SYNC_BRANCH"
+          fi
+          body="$RUNNER_TEMP/upstream-sync-pr.md"
+          cat > "$body" <<EOF
+          Automated upstream update from [$UPSTREAM_REPO](https://github.com/$UPSTREAM_REPO/tree/$UPSTREAM_BRANCH) at commit [$UPSTREAM_SHA](https://github.com/$UPSTREAM_REPO/commit/$UPSTREAM_SHA).
+
+          The merged source passed the repository build command before this pull request was opened. Review the Folia-specific changes and runtime ownership before merging; this workflow does not merge or deploy.
+          EOF
+          pr_number=$(gh pr list --repo "$GITHUB_REPOSITORY" --state open --head "$SYNC_BRANCH" --base "$TARGET_BRANCH" --json number --jq '.[0].number // empty')
+          if [ -n "$pr_number" ]; then
+            gh pr edit "$pr_number" --repo "$GITHUB_REPOSITORY" --title "chore: sync $UPSTREAM_REPO" --body-file "$body"
+          else
+            gh pr create --repo "$GITHUB_REPOSITORY" --base "$TARGET_BRANCH" --head "$SYNC_BRANCH" --title "chore: sync $UPSTREAM_REPO" --body-file "$body"
+          fi

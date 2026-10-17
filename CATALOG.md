@@ -46,7 +46,7 @@ This registry is not a claim that every listed plugin is safe. **Runtime tests o
 | nightcore | third-party | active | Yes | [Modrinth Folia release 2.16.7](https://modrinth.com/plugin/nightcore/version/2.16.7) |
 | NOrder | third-party | active | Yes | pending official source verification |
 | ODailyQuests | third-party | active | Yes | pending official source verification |
-| packetevents | third-party | active | Yes | pending official source verification |
+| packetevents | third-party | active | Yes | [Official v2.14.0 release](https://github.com/retrooper/packetevents/releases/tag/v2.14.0) |
 | PatPatPlugin | third-party | active | Yes | pending official source verification |
 | PerfMarry | third-party | active | Yes | pending official source verification |
 | PlaceholderAPI | third-party | active | Yes | pending official source verification |

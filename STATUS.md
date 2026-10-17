@@ -28,3 +28,12 @@ Only install an artifact from a passing workflow after confirming plugin.yml exp
 - On the latest cold boot, MoreFoWorld 1.13.3 loaded before CMI and logged that it added lobby. mv list showed lobby, world, world_nether, and world_the_end. npc list showed 19 saved lobby NPCs plus modeltest in world. No lobby-missing RandomTeleportation warning appeared in this startup log.
 - The preceding boot had produced a RandomTeleportation missing-lobby warning; cmi reload then succeeded at 00:21:49. The new load order prevented that warning from recurring on cold boot. Actual RTP behavior was not exercised.
 - The previous live comparison found config.yml, worlds.yml, and anchors.yml byte-identical to their saved copies. No player gameplay, login, portal, or multi-region plugin interaction was verified.
+
+## Experimental GitHub releases (2026-10-18)
+
+- [CyoriaCore `v3.0.5-standalone-authme-folia.1`](https://github.com/CyoriaSMP-Team/CyoriaCore/releases/tag/v3.0.5-standalone-authme-folia.1) — startup smoke test only; SHA-256 `05ce576bfe18b3f52544ac182661d03caec6dce67f062a528e71f10f6b931a7e`.
+- [ItemTag-Folia `v3.7.7-folia.1`](https://github.com/CyoriaSMP-Team/ItemTag-Folia/releases/tag/v3.7.7-folia.1) — startup smoke test only; player item behavior remains unverified; SHA-256 `22cb926d56049f251547d8f552f920bd89964b24214c473acd3f3c6afb0467a5`.
+- [Multiverse-Core-Folia `folia-1.21.11-17`](https://github.com/CyoriaSMP-Team/Multiverse-Core-Folia/releases/tag/folia-1.21.11-17) — 183 tests and startup/world-list smoke passed; plugin/player world operations remain unverified; SHA-256 `e115f49a455391949dcf2aae5c3af4f86f075e61d9588e0e168730a74fd31d4c`.
+- [MoreFoWorld-Folia `v1.13.3-folia.1`](https://github.com/CyoriaSMP-Team/MoreFoWorld-Folia/releases/tag/v1.13.3-folia.1) — cold-boot load order and world listing verified; portal, teleport, and world lifecycle behavior remains unverified; SHA-256 `f3e817e0c5aadc2f6331aae2f31a1c6d2c709aa3062e499dcbb425c306643665`.
+
+All four releases are prereleases, and each attached JAR hash matches the installed server artifact. They do not certify full gameplay or Folia thread safety.

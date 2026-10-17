@@ -7,5 +7,5 @@
   "source": "pending official source verification",
   "target": "Folia 1.21.11",
   "build_proves_folia_safety": false,
-  "notes": "At the 2026-10-17 live Folia startup, 19 saved NPCs in lobby were skipped because that world was not loaded. The experimental Multiverse-Core fork was installed but Folia 1.21.11 throws UnsupportedOperationException from CraftServer.createWorld(WorldCreator), so the world still cannot be loaded."
+  "notes": "On 2026-10-18, all 19 saved lobby NPCs appeared in npc list after MoreFoWorld 1.13.3 loaded lobby on Folia 1.21.11 build 14. No FancyNpcs missing-world or NPC-load errors appeared after lobby loaded. Player visibility and interactions were not tested."
 }

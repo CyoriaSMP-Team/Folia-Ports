@@ -7,5 +7,5 @@
   "source": "pending official source verification",
   "target": "Folia 1.21.11",
   "build_proves_folia_safety": false,
-  "notes": ""
+  "notes": "On 2026-10-18, CMI's RandomTeleportation component warned that lobby was missing before MoreFoWorld added it. cmi reload later confirmed config and locale reload; no actual RTP command or cold-boot ordering fix has been verified."
 }

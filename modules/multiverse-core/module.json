@@ -7,5 +7,5 @@
   "source": "https://github.com/CyoriaSMP-Team/Multiverse-Core-Folia",
   "target": "Folia 1.21.11",
   "build_proves_folia_safety": false,
-  "notes": "Experimental artifact folia-1.21.11-9 (SHA-256 54a4a11f69087820c5594f371cca8c2a0ffbc72e705836082b8294c5af8da1f0) was tested live. It enabled but Folia 1.21.11 throws UnsupportedOperationException in CraftServer.createWorld(WorldCreator), so lobby failed to autoload and all 19 FancyNpcs remain skipped. worlds.yml and the lobby backup are unchanged. Do not count this as healthy."
+  "notes": "Artifact folia-1.21.11-17 from commit 7e5a7076 passed 183 tests and enabled on Folia 1.21.11 build 14. Its autoload guard skips unsupported Bukkit world creation; MoreFoWorld currently supplies the lobby load. All 19 lobby NPCs loaded. Import/unload/remove/regenerate, portal, teleport, command queue, and multi-region ownership remain experimental."
 }

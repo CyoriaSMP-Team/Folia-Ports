@@ -37,6 +37,8 @@ This registry is not a claim that every listed plugin is safe. **Runtime tests o
 | Kalo | third-party | active | Yes | pending official source verification |
 | LuckPerms | third-party | active | Yes | pending official source verification |
 | MiniMOTD | third-party | active | Yes | pending official source verification |
+| MoreFoWorld | upstream-fork | experimental | Yes | [Code](https://github.com/CyoriaSMP-Team/MoreFoWorld-Folia/tree/folia/1.21.11) |
+| Multiverse-Core | upstream-fork | experimental | Yes | [Code](https://github.com/CyoriaSMP-Team/Multiverse-Core-Folia) |
 | MythicMobs | official-folia | active | Yes | [Code](https://modrinth.com/plugin/mythicmobs/version/5.13.0) |
 | NBTAPI | third-party | active | Yes | pending official source verification |
 | nightcore | third-party | active | Yes | pending official source verification |
@@ -97,8 +99,6 @@ This registry is not a claim that every listed plugin is safe. **Runtime tests o
 | FreeCoinFlip | third-party | planned | No | pending official source verification |
 | LagFixer | third-party | planned | No | pending official source verification |
 | MimiVouchers | third-party | planned | No | pending official source verification |
-| Multiverse-Core | upstream-fork | experimental | Yes | [Code](https://github.com/CyoriaSMP-Team/Multiverse-Core-Folia); lobby currently depends on MoreFoWorld |
-| MoreFoWorld | third-party | experimental | Yes | [Hangar release](https://hangar.papermc.io/Folia-Inquisitors/MoreFoWorld/versions/1.13.3); temporary internal-API world loader |
 | P2PSmokeTest | custom-public | planned | No | pending official source verification |
 | PetKuEngSus | upstream-fork | experimental | No | [Code](https://github.com/CyoriaSMP-Team/PetKuEngSus/tree/folia/1.21.11) |
 | PhatLoots | third-party | planned | No | pending official source verification |

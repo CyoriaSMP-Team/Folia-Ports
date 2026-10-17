@@ -10,6 +10,7 @@ upstreams={
 'FastAsyncWorldEdit':'https://github.com/CyoriaSMP-Team/FAWE-Folia',
 'WorldGuard':'https://github.com/CyoriaSMP-Team/WorldGuard-Folia',
 'Multiverse-Core':'https://github.com/CyoriaSMP-Team/Multiverse-Core-Folia',
+'MoreFoWorld':'https://github.com/CyoriaSMP-Team/MoreFoWorld-Folia',
 'Skript':'https://github.com/CyoriaSMP-Team/Skript-Folia',
 'DeluxeMenus':'https://github.com/CyoriaSMP-Team/DeluxeMenus-Folia',
 'DecentHolograms':'https://github.com/CyoriaSMP-Team/DecentHolograms-Folia',

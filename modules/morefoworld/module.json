@@ -1,0 +1,11 @@
+{
+  "name": "MoreFoWorld",
+  "slug": "morefoworld",
+  "type": "upstream-fork",
+  "state": "experimental",
+  "installed_on_folia": true,
+  "source": "https://github.com/CyoriaSMP-Team/MoreFoWorld-Folia/tree/folia/1.21.11",
+  "target": "Folia 1.21.11",
+  "build_proves_folia_safety": false,
+  "notes": "Based on the official 1.13.3 source with optional Paper load ordering that places it before CMI. The build succeeded; runtime reboot validation is pending. MoreFoWorld describes its world lifecycle behavior as temporary hacks using server internals."
+}

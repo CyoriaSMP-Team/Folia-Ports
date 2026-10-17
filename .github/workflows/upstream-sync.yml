@@ -30,15 +30,9 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0
-
-      - uses: actions/setup-java@v4
-        with:
-          distribution: temurin
-          java-version: ${{ inputs.java_version }}
-          cache: ${{ inputs.build_system }}
 
       - name: Merge upstream into the Folia branch
         id: merge
@@ -73,6 +67,14 @@ jobs:
           echo "changed=true" >> "$GITHUB_OUTPUT"
           echo "upstream_sha=$upstream_sha" >> "$GITHUB_OUTPUT"
           echo "Merged $UPSTREAM_REPO/$UPSTREAM_BRANCH at $upstream_sha into $TARGET_BRANCH." >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Set up Java for merged source
+        if: steps.merge.outputs.changed == 'true'
+        uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: ${{ inputs.java_version }}
+          cache: ${{ inputs.build_system }}
 
       - name: Build and test the merged source
         if: steps.merge.outputs.changed == 'true'

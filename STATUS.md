@@ -13,6 +13,7 @@ CyoriaSMP has switched engine. Unsupported historical plugin JARs and their conf
 5. Custom core: CyoriaCore, CyoriaCycRuntime, AuthEyeLab, and interactive, chat, TPA, and status modules require direct port or runtime verification.
 6. Skript ecosystem: scripts and addons are not assumed compatible; port scripts into Java/CyoriaRuntime or an audited DSL.
 7. GUI and gameplay: DeluxeMenus, DecentHolograms, third-party mini-games, and pet systems need test or port.
+8. MOTD: `CyoriaMOTDGuard` is disabled by its hard `BannerMOTDplus` dependency. A staged BannerMOTDPlus 2.0.0 JAR matches the official Modrinth SHA-512, but its `plugin.yml` lacks Folia's required `folia-supported: true` marker. Modrinth lists Paper, Purpur, BungeeCord, and Velocity and marks the project ARR; do not publish a modified copy without maintainer permission. Keep MiniMOTD as the working fallback until a Folia-ready release or source permission is available.
 
 Only install an artifact from a passing workflow after confirming plugin.yml explicitly supports Folia and running runtime smoke tests; folia-supported: true alone is insufficient.
 

@@ -4,8 +4,8 @@
   "type": "third-party",
   "state": "blocked",
   "installed_on_folia": true,
-  "source": "pending official source verification",
+  "source": "installed JAR only; no source checkout located",
   "target": "Folia 1.21.11",
   "build_proves_folia_safety": false,
-  "notes": ""
+  "notes": "Live Folia startup disables this plugin because its hard dependency BannerMOTDplus is absent. The official 2.0.0 dependency is staged locally but is not Folia-loadable as published because it lacks folia-supported: true."
 }

@@ -1,11 +1,11 @@
 {
   "name": "BannerMOTDplus",
   "slug": "bannermotdplus",
-  "type": "custom-public",
-  "state": "planned",
+  "type": "third-party",
+  "state": "blocked",
   "installed_on_folia": false,
-  "source": "pending official source verification",
+  "source": "https://modrinth.com/plugin/bannermotd",
   "target": "Folia 1.21.11",
   "build_proves_folia_safety": false,
-  "notes": "Folia support not declared"
+  "notes": "Local staged BannerMOTDPlus 2.0.0 matches the official Modrinth SHA-512. Its plugin.yml lacks folia-supported: true, which Folia requires. Modrinth marks the project ARR and lists Paper/Purpur/BungeeCord/Velocity, so do not patch or publish a derivative without maintainer permission."
 }

@@ -7,5 +7,5 @@
   "source": "https://github.com/CyoriaSMP-Team/MoreFoWorld-Folia/tree/folia/1.21.11",
   "target": "Folia 1.21.11",
   "build_proves_folia_safety": false,
-  "notes": "Based on the official 1.13.3 source with optional Paper load ordering that places it before CMI. The build succeeded; runtime reboot validation is pending. MoreFoWorld describes its world lifecycle behavior as temporary hacks using server internals."
+  "notes": "Based on official 1.13.3 with optional Paper load ordering before CMI. On the 2026-10-18 Folia 1.21.11 cold boot, MoreFoWorld enabled before CMI, added lobby, and no missing-lobby warning appeared; Multiverse listed all four worlds and FancyNpcs listed 19 lobby NPCs. Actual RTP and general world lifecycle behavior remain unverified. MoreFoWorld describes its world handling as temporary hacks using server internals."
 }

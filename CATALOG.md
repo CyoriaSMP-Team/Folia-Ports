@@ -43,7 +43,7 @@ This registry is not a claim that every listed plugin is safe. **Runtime tests o
 | Multiverse-Core | upstream-fork | experimental | Yes | [Code](https://github.com/CyoriaSMP-Team/Multiverse-Core-Folia) |
 | MythicMobs | official-folia | active | Yes | [Code](https://modrinth.com/plugin/mythicmobs/version/5.13.0) |
 | NBTAPI | third-party | active | Yes | pending official source verification |
-| nightcore | third-party | active | Yes | pending official source verification |
+| nightcore | third-party | active | Yes | [Modrinth Folia release 2.16.7](https://modrinth.com/plugin/nightcore/version/2.16.7) |
 | NOrder | third-party | active | Yes | pending official source verification |
 | ODailyQuests | third-party | active | Yes | pending official source verification |
 | packetevents | third-party | active | Yes | pending official source verification |

@@ -1,11 +1,11 @@
 {
   "name": "WorldEdit",
   "slug": "worldedit",
-  "type": "third-party",
-  "state": "active",
+  "type": "upstream-fork",
+  "state": "experimental",
   "installed_on_folia": true,
-  "source": "pending official source verification",
+  "source": "https://github.com/CyoriaSMP-Team/WorldEdit-Folia/releases/tag/v7.4.7-folia.1",
   "target": "Folia 1.21.11",
   "build_proves_folia_safety": false,
-  "notes": ""
+  "notes": "Folia 1.21.11 build from commit 82b2e0aa00e5613a184724aede89a5b7af92089f. Exact CI asset SHA-256 617bd50076f31e8ae1b4000b155c9b89596864c307c123febf8ee7e5c447d73c matches the live JAR. Live startup and /we version responded on Folia 1.21.11 build 14; player navigation, teleport, and cross-region edits remain unverified."
 }

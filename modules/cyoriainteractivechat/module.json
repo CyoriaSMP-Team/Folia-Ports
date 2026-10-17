@@ -4,7 +4,7 @@
   "type": "custom-public",
   "state": "experimental",
   "installed_on_folia": true,
-  "source": "https://github.com/CyoriaSMP-Team/CyoriaInteractiveChat",
+  "source": "https://github.com/CyoriaSMP-Team/CyoriaInteractiveChat/releases/tag/v0.1.5-folia.1",
   "target": "Folia 1.21.11",
   "build_proves_folia_safety": false,
   "notes": "Published as v0.1.5-folia.1 after CI build and inventory mapping check passed. The exact release asset (SHA-256 014376f0efac52940d668fe9ca5d17d5981d9bff414b5411b7bbaa5ac5750f30) is installed and enabled on Folia 1.21.11 build 14. Inline chat and inventory GUI flow passed on an isolated Leaf 1.21.11 Canary; live Folia player interaction remains unverified."

@@ -4,7 +4,7 @@
   "type": "upstream-fork",
   "state": "experimental",
   "installed_on_folia": true,
-  "source": "https://github.com/CyoriaSMP-Team/ProtectionStones-Folia",
+  "source": "https://github.com/CyoriaSMP-Team/ProtectionStones-Folia/releases/tag/v2.10.7-folia.1",
   "target": "Folia 1.21.11",
   "build_proves_folia_safety": false,
   "notes": "Experimental prerelease v2.10.7-folia.1. CI 39060624317 passed; startup enabled on live CyoriaSMP Folia 1.21.11. Isolated claim create/protect/unclaim flow passed with the same JAR. Active file: plugins/ProtectionStones-2.10.7-Folia-test.jar. Multi-region, cross-region block events and complex WorldGuard mutation remain unverified. SHA-256 8162332a6a0f89a3996c6ccba061bd393d192fe70f66d565a9ffcec2319ca1c2."

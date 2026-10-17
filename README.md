@@ -10,8 +10,8 @@ See [STATUS.md](STATUS.md) for current migration blockers and [CATALOG.md](CATAL
 
 | Project | Repository | Current stage |
 |---|---|---|
-| WorldEdit | [WorldEdit-Folia](https://github.com/CyoriaSMP-Team/WorldEdit-Folia) | CI passed, startup smoke-tested with WorldGuard; more multi-region tests needed |
-| WorldGuard | [WorldGuard-Folia](https://github.com/CyoriaSMP-Team/WorldGuard-Folia) | CI passed, startup smoke-tested with WorldEdit; more region tests needed |
+| WorldEdit | [WorldEdit-Folia](https://github.com/CyoriaSMP-Team/WorldEdit-Folia) | [Experimental prerelease v7.4.7-folia.1](https://github.com/CyoriaSMP-Team/WorldEdit-Folia/releases/tag/v7.4.7-folia.1); startup and /we version passed; navigation and multi-region edits need testing |
+| WorldGuard | [WorldGuard-Folia](https://github.com/CyoriaSMP-Team/WorldGuard-Folia) | [Experimental prerelease v7.0.17-folia.1](https://github.com/CyoriaSMP-Team/WorldGuard-Folia/releases/tag/v7.0.17-folia.1); startup and read-only region listing passed; edits and multi-region behavior need testing |
 | ProtectionStones | [ProtectionStones-Folia](https://github.com/CyoriaSMP-Team/ProtectionStones-Folia) | Experimental prerelease `v2.10.7-folia.1`; startup and isolated claim lifecycle passed; multi-region safety remains unverified |
 | FastAsyncWorldEdit | [FAWE-Folia](https://github.com/CyoriaSMP-Team/FAWE-Folia) | Experimental source, CI passed, **Folia flag not enabled**; replaces WorldEdit |
 | Multiverse-Core | [Multiverse-Core-Folia](https://github.com/CyoriaSMP-Team/Multiverse-Core-Folia) | Existing worlds load via MoreFoWorld; `/mv create` still fails because Folia throws from `Bukkit.createWorld` |
@@ -28,7 +28,7 @@ See [STATUS.md](STATUS.md) for current migration blockers and [CATALOG.md](CATAL
 
 ## Public installation builds
 
-The experimental branches use `folia/1.21.11`. Open the fork's **Actions → Folia 1.21.11 Build** page and download the development JAR artifact of a green run. **Never install a `*-sources.jar` or `*-javadoc.jar` as a plugin.** No automatic deployment onto public servers is configured.
+Use the fork's **Releases** page for experimental prereleases. Development builds are under **Actions → Folia 1.21.11 Build**. Download the server JAR artifact; **never install a `*-sources.jar` or `*-javadoc.jar` as a plugin.** No automatic deployment onto public servers is configured.
 
 ## Maintenance
 

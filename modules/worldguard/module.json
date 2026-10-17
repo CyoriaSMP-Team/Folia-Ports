@@ -4,8 +4,8 @@
   "type": "upstream-fork",
   "state": "experimental",
   "installed_on_folia": true,
-  "source": "https://github.com/CyoriaSMP-Team/WorldGuard-Folia",
+  "source": "https://github.com/CyoriaSMP-Team/WorldGuard-Folia/releases/tag/v7.0.17-folia.1",
   "target": "Folia 1.21.11",
   "build_proves_folia_safety": false,
-  "notes": "WorldGuard-Folia 7.0.17+bb6504f enabled with WorldEdit 7.4.7-SNAPSHOT on Folia 1.21.11 build 14. The read-only /rg list -w world command returned its region listing. Region edits, player claims, and cross-region interactions remain untested."
+  "notes": "Published experimental release v7.0.17-folia.1 from commit bb6504f30b1ca3a61605c779653e7d326387231c. Exact CI asset SHA-256 1bfb86bae8dcce95bc9fde970cde895e05e7633201effbaf9dfdd923224ac96c matches the live JAR. It enabled alongside WorldEdit-Folia on Folia 1.21.11 build 14; read-only /rg list -w world responded. Region edits, player claims, and cross-region interactions remain untested."
 }

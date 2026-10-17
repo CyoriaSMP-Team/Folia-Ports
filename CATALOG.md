@@ -16,6 +16,7 @@ This registry is not a claim that every listed plugin is safe. **Runtime tests o
 | CMILib | third-party | active | Yes | pending official source verification |
 | CoreProtect | third-party | active | Yes | pending official source verification |
 | CyoriaCore | cyoria-private | experimental | Yes | private:CyoriaSMP-Team/CyoriaCore |
+| CyoriaInteractiveChat | custom-public | experimental | Yes | [Release](https://github.com/CyoriaSMP-Team/CyoriaInteractiveChat/releases/tag/v0.1.5-folia.1) |
 | CyoriaMOTDGuard | third-party | experimental | Yes | [Release](https://github.com/CyoriaSMP-Team/CyoriaMOTDGuard-Folia/releases/tag/v1.0.2-folia.1) |
 | DiscordSRV | third-party | active | Yes | pending official source verification |
 | DonutSell | third-party | active | Yes | pending official source verification |
@@ -53,6 +54,7 @@ This registry is not a claim that every listed plugin is safe. **Runtime tests o
 | PlayerPoints | third-party | active | Yes | pending official source verification |
 | PlayerWarps | third-party | active | Yes | pending official source verification |
 | PlugManX | third-party | active | Yes | pending official source verification |
+| ProtectionStones | upstream-fork | experimental | Yes | [Release](https://github.com/CyoriaSMP-Team/ProtectionStones-Folia/releases/tag/v2.10.7-folia.1) |
 | ProtocolLib | official-folia | active | Yes | [Code](https://github.com/CyoriaSMP-Team/ProtocolLib-Folia/tree/folia/1.21.11) |
 | PvPManager | third-party | active | Yes | pending official source verification |
 | QSFindItemAddOn | third-party | active | Yes | pending official source verification |
@@ -71,8 +73,8 @@ This registry is not a claim that every listed plugin is safe. **Runtime tests o
 | VoidGen | third-party | active | Yes | pending official source verification |
 | VotifierPlus | third-party | active | Yes | pending official source verification |
 | VotingPlugin | third-party | active | Yes | pending official source verification |
-| WorldEdit | third-party | active | Yes | pending official source verification |
-| WorldGuard | upstream-fork | experimental | Yes | [Code](https://github.com/CyoriaSMP-Team/WorldGuard-Folia) |
+| WorldEdit | upstream-fork | experimental | Yes | [Release](https://github.com/CyoriaSMP-Team/WorldEdit-Folia/releases/tag/v7.4.7-folia.1) |
+| WorldGuard | upstream-fork | experimental | Yes | [Release](https://github.com/CyoriaSMP-Team/WorldGuard-Folia/releases/tag/v7.0.17-folia.1) |
 | zAuctionHouse | third-party | active | Yes | pending official source verification |
 | zMenu | third-party | active | Yes | pending official source verification |
 | AxiomPaper | third-party | planned | No | pending official source verification |
@@ -82,7 +84,6 @@ This registry is not a claim that every listed plugin is safe. **Runtime tests o
 | ChatGames | third-party | planned | No | pending official source verification |
 | CyoriaAuthEyeLab | custom-public | planned | No | pending official source verification |
 | CyoriaCycRuntime | custom-public | planned | No | pending official source verification |
-| CyoriaInteractiveChat | custom-public | experimental | Yes | [Release](https://github.com/CyoriaSMP-Team/CyoriaInteractiveChat/releases/tag/v0.1.5-folia.1) |
 | CyoriaStatusEmbed | custom-public | planned | No | pending official source verification |
 | CyoriaTPA | custom-public | planned | No | pending official source verification |
 | DailyRewards | third-party | planned | No | pending official source verification |
@@ -103,7 +104,6 @@ This registry is not a claim that every listed plugin is safe. **Runtime tests o
 | P2PSmokeTest | custom-public | planned | No | pending official source verification |
 | PetKuEngSus | upstream-fork | experimental | No | [Code](https://github.com/CyoriaSMP-Team/PetKuEngSus/tree/folia/1.21.11) |
 | PhatLoots | third-party | planned | No | pending official source verification |
-| ProtectionStones | upstream-fork | experimental | Yes | [Release](https://github.com/CyoriaSMP-Team/ProtectionStones-Folia/releases/tag/v2.10.7-folia.1) |
 | ProtectionStonesMenu | third-party | planned | No | pending official source verification |
 | ProtocolLib2PacketEvents | upstream-fork | planned | No | [Code](https://github.com/CyoriaSMP-Team/ProtocolLib2PacketEvents) |
 | RedeemDialog | third-party | planned | No | pending official source verification |
@@ -119,7 +119,7 @@ This registry is not a claim that every listed plugin is safe. **Runtime tests o
 | VirtualStorage | third-party | planned | No | pending official source verification |
 | WorldGuardExtraFlags | third-party | planned | No | pending official source verification |
 
-**Tracked modules: 114. Plugin JARs present: 72. Experimental/blocked: 16.**
+**Tracked modules: 114. Plugin JARs present: 73. Experimental/blocked: 17.**
 
 ### Rules
 - Prefer verified official Folia releases and retain original license/credits.

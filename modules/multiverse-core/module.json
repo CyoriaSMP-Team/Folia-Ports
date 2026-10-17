@@ -7,5 +7,5 @@
   "source": "https://github.com/CyoriaSMP-Team/Multiverse-Core-Folia",
   "target": "Folia 1.21.11",
   "build_proves_folia_safety": false,
-  "notes": "Artifact folia-1.21.11-17 from commit 7e5a7076 passed 183 tests and enabled on Folia 1.21.11 build 14. MoreFoWorld supplies existing lobby loading, but live `/mv create ps-folia-smoke normal` still throws UnsupportedOperationException from Bukkit.createWorld. Dynamic world creation is unavailable on this Folia build. Import/unload/remove/regenerate, portal, teleport, command queue, and multi-region ownership remain experimental."
+  "notes": "Experimental release folia-1.21.11-18 (commit 4cc9e240, SHA-256 b6f1f5b4c2e8623a1ef028f69f77b423a2a5ceeb70cfa0bef9fce66097058b7b) passed 183 tests. On live Folia 1.21.11 build 14, `/mv create` succeeded through MoreFoWorld 1.13.4 but exceeded the 5-second global-region watchdog threshold. A copied disposable world passed `/mv import`, survived cold boot as UNLOADED, then `/mv load` completed in about 37 seconds and showed NORMAL. Test data was moved to rollback and original worlds.yml restored byte-for-byte. Player teleports, unload, portals, RTP, and cross-region behavior remain unverified."
 }

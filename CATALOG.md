@@ -39,8 +39,8 @@ This registry is not a claim that every listed plugin is safe. **Runtime tests o
 | Kalo | third-party | active | Yes | pending official source verification |
 | LuckPerms | third-party | active | Yes | pending official source verification |
 | MiniMOTD | third-party | active | Yes | pending official source verification |
-| MoreFoWorld | upstream-fork | experimental | Yes | [Code](https://github.com/CyoriaSMP-Team/MoreFoWorld-Folia/tree/folia/1.21.11) |
-| Multiverse-Core | upstream-fork | experimental | Yes | [Code](https://github.com/CyoriaSMP-Team/Multiverse-Core-Folia) |
+| MoreFoWorld | upstream-fork | experimental | Yes | [Release v1.13.4-folia.1](https://github.com/CyoriaSMP-Team/MoreFoWorld-Folia/releases/tag/v1.13.4-folia.1); live create/import/load smoke passed through Multiverse on empty test worlds |
+| Multiverse-Core | upstream-fork | experimental | Yes | [Release folia-1.21.11-18](https://github.com/CyoriaSMP-Team/Multiverse-Core-Folia/releases/tag/folia-1.21.11-18); 183 tests and live create/import/cold-boot-load smoke passed; player lifecycle and cross-region behavior remain unverified |
 | MythicMobs | official-folia | active | Yes | [Code](https://modrinth.com/plugin/mythicmobs/version/5.13.0) |
 | NBTAPI | third-party | active | Yes | pending official source verification |
 | nightcore | third-party | active | Yes | [Modrinth Folia release 2.16.7](https://modrinth.com/plugin/nightcore/version/2.16.7) |

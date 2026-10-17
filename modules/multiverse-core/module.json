@@ -7,5 +7,5 @@
   "source": "https://github.com/CyoriaSMP-Team/Multiverse-Core-Folia",
   "target": "Folia 1.21.11",
   "build_proves_folia_safety": false,
-  "notes": "Folia support not declared"
+  "notes": "Folia scheduler port WIP, GitHub Actions CI + Draft PR #1. World ownership and test failures unresolved."
 }

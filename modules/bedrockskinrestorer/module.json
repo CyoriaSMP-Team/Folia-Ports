@@ -1,11 +1,11 @@
 {
   "name": "BedrockSkinRestorer",
   "slug": "bedrockskinrestorer",
-  "type": "third-party",
-  "state": "planned",
-  "installed_on_folia": false,
-  "source": "pending official source verification",
+  "type": "official-folia",
+  "state": "active",
+  "installed_on_folia": true,
+  "source": "https://modrinth.com/plugin/bedrock-skin-restorer/version/1.1",
   "target": "Folia 1.21.11",
   "build_proves_folia_safety": false,
-  "notes": "Folia support not declared"
+  "notes": "Official release 1.1 downloaded and SHA-512 verified; JAR plugin.yml reports internal version 1.0.0. Enabled on Folia; functional Bedrock join not tested."
 }

@@ -7,5 +7,5 @@
   "source": "https://github.com/CyoriaSMP-Team/DecentHolograms-Folia",
   "target": "Folia 1.21.11",
   "build_proves_folia_safety": false,
-  "notes": "Folia support not declared"
+  "notes": "Partial region/player viewer scheduling patch, CI compiled; plugin has further ownership gaps, not installed."
 }

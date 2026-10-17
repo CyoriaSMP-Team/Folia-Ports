@@ -7,5 +7,5 @@
   "source": "https://github.com/CyoriaSMP-Team/DeluxeMenus-Folia",
   "target": "Folia 1.21.11",
   "build_proves_folia_safety": false,
-  "notes": "Folia support not declared"
+  "notes": "GUI entity scheduler WIP, Draft PR #1. CI unit tests and runtime not yet fully verified."
 }

@@ -9,6 +9,7 @@ This registry is not a claim that every listed plugin is safe. **Runtime tests o
 | AxAFKZone | third-party | active | Yes | pending official source verification |
 | AxTrade | third-party | active | Yes | pending official source verification |
 | AxVaults | third-party | active | Yes | pending official source verification |
+| BedrockSkinRestorer | official-folia | active | Yes | [Code](https://modrinth.com/plugin/bedrock-skin-restorer/version/1.1) |
 | BetterRTP | third-party | active | Yes | pending official source verification |
 | BetterTeams | third-party | active | Yes | pending official source verification |
 | CMI | third-party | active | Yes | pending official source verification |
@@ -71,7 +72,6 @@ This registry is not a claim that every listed plugin is safe. **Runtime tests o
 | zMenu | third-party | active | Yes | pending official source verification |
 | AxiomPaper | third-party | planned | No | pending official source verification |
 | BannerMOTDplus | custom-public | planned | No | pending official source verification |
-| BedrockSkinRestorer | third-party | planned | No | pending official source verification |
 | bosssummoner | third-party | planned | No | pending official source verification |
 | ChatColor2 | third-party | planned | No | pending official source verification |
 | ChatGames | third-party | planned | No | pending official source verification |
@@ -117,7 +117,7 @@ This registry is not a claim that every listed plugin is safe. **Runtime tests o
 | WorldGuard | upstream-fork | planned | No | [Code](https://github.com/CyoriaSMP-Team/WorldGuard-Folia) |
 | WorldGuardExtraFlags | third-party | planned | No | pending official source verification |
 
-**Tracked modules: 112. Installed: 65. Experimental/blocked: 10.**
+**Tracked modules: 112. Installed: 66. Experimental/blocked: 10.**
 
 ### Rules
 - Prefer verified official Folia releases and retain original license/credits.

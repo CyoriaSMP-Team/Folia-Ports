@@ -2,10 +2,10 @@
   "name": "CyoriaCore",
   "slug": "cyoriacore",
   "type": "cyoria-private",
-  "state": "planned",
-  "installed_on_folia": false,
+  "state": "experimental",
+  "installed_on_folia": true,
   "source": "private:CyoriaSMP-Team/CyoriaCore",
   "target": "Folia 1.21.11",
   "build_proves_folia_safety": false,
-  "notes": "Folia support not declared"
+  "notes": "Private Folia port declares folia-supported: true. JDK 21 build 05ce576bfe18b3f52544ac182661d03caec6dce67f062a528e71f10f6b931a7e passed a Folia 1.21.11 build 14 startup smoke test: plugin enabled, MySQL connected, and all four .cyc runtime scripts enabled. Player commands and gameplay paths remain untested."
 }

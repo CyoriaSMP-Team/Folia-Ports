@@ -15,6 +15,7 @@ This registry is not a claim that every listed plugin is safe. **Runtime tests o
 | CMI | third-party | active | Yes | pending official source verification |
 | CMILib | third-party | active | Yes | pending official source verification |
 | CoreProtect | third-party | active | Yes | pending official source verification |
+| CyoriaCore | cyoria-private | experimental | Yes | private:CyoriaSMP-Team/CyoriaCore |
 | CyoriaMOTDGuard | third-party | blocked | Yes | installed JAR only; no source checkout located |
 | DiscordSRV | third-party | active | Yes | pending official source verification |
 | DonutSell | third-party | active | Yes | pending official source verification |
@@ -79,7 +80,6 @@ This registry is not a claim that every listed plugin is safe. **Runtime tests o
 | ChatColor2 | third-party | planned | No | pending official source verification |
 | ChatGames | third-party | planned | No | pending official source verification |
 | CyoriaAuthEyeLab | custom-public | planned | No | pending official source verification |
-| CyoriaCore | cyoria-private | planned | No | private:CyoriaSMP-Team/CyoriaCore |
 | CyoriaCycRuntime | custom-public | planned | No | pending official source verification |
 | CyoriaInteractiveChat | custom-public | planned | No | pending official source verification |
 | CyoriaStatusEmbed | custom-public | planned | No | pending official source verification |
@@ -119,7 +119,7 @@ This registry is not a claim that every listed plugin is safe. **Runtime tests o
 | WorldGuard | upstream-fork | planned | No | [Code](https://github.com/CyoriaSMP-Team/WorldGuard-Folia) |
 | WorldGuardExtraFlags | third-party | planned | No | pending official source verification |
 
-**Tracked modules: 114. Plugin JARs present: 69. Experimental/blocked: 13.**
+**Tracked modules: 114. Plugin JARs present: 70. Experimental/blocked: 14.**
 
 ### Rules
 - Prefer verified official Folia releases and retain original license/credits.

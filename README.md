@@ -4,7 +4,7 @@ Community-visible work on Minecraft **Folia 1.21.11** interoperability. Each plu
 
 See [STATUS.md](STATUS.md) for current migration blockers and [CATALOG.md](CATALOG.md) for the plugin JAR inventory and observed failures.
 
-**Important:** a green CI build is not certification of safe Folia region ownership. Check the `FOLIA_PORT_STATUS.md` in each fork and the open PRs before using a development artifact. Avoid enabling `folia-supported: true` until the port is actually safe.
+**Important:** neither a green CI build nor `folia-supported: true` certifies safe Folia region ownership. The marker only allows loading. Check each fork's `FOLIA_PORT_STATUS.md` before use; experimental builds may enable the marker for authorized testing while still having unverified paths.
 
 ## Official-upstream forks
 
@@ -12,9 +12,9 @@ See [STATUS.md](STATUS.md) for current migration blockers and [CATALOG.md](CATAL
 |---|---|---|
 | WorldEdit | [WorldEdit-Folia](https://github.com/CyoriaSMP-Team/WorldEdit-Folia) | CI passed, startup smoke-tested with WorldGuard; more multi-region tests needed |
 | WorldGuard | [WorldGuard-Folia](https://github.com/CyoriaSMP-Team/WorldGuard-Folia) | CI passed, startup smoke-tested with WorldEdit; more region tests needed |
-| ProtectionStones | [ProtectionStones-Folia](https://github.com/CyoriaSMP-Team/ProtectionStones-Folia) | Experimental source, CI passed, **Folia flag not enabled** |
+| ProtectionStones | [ProtectionStones-Folia](https://github.com/CyoriaSMP-Team/ProtectionStones-Folia) | Experimental prerelease `v2.10.7-folia.1`; startup and isolated claim lifecycle passed; multi-region safety remains unverified |
 | FastAsyncWorldEdit | [FAWE-Folia](https://github.com/CyoriaSMP-Team/FAWE-Folia) | Experimental source, CI passed, **Folia flag not enabled**; replaces WorldEdit |
-| Multiverse-Core | [Multiverse-Core-Folia](https://github.com/CyoriaSMP-Team/Multiverse-Core-Folia) | Live smoke test failed: Folia throws from world creation API; lobby unavailable |
+| Multiverse-Core | [Multiverse-Core-Folia](https://github.com/CyoriaSMP-Team/Multiverse-Core-Folia) | Existing worlds load via MoreFoWorld; `/mv create` still fails because Folia throws from `Bukkit.createWorld` |
 | Skript | [Skript-Folia](https://github.com/CyoriaSMP-Team/Skript-Folia) | Official fork, port pending; CyoriaRuntime migration is another path |
 | DeluxeMenus | [DeluxeMenus-Folia](https://github.com/CyoriaSMP-Team/DeluxeMenus-Folia) | Official fork, port pending |
 | DecentHolograms | [DecentHolograms](https://github.com/CyoriaSMP-Team/DecentHolograms) | Official fork, Folia port pending |

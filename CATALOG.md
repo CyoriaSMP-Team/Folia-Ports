@@ -103,7 +103,7 @@ This registry is not a claim that every listed plugin is safe. **Runtime tests o
 | P2PSmokeTest | custom-public | planned | No | pending official source verification |
 | PetKuEngSus | upstream-fork | experimental | No | [Code](https://github.com/CyoriaSMP-Team/PetKuEngSus/tree/folia/1.21.11) |
 | PhatLoots | third-party | planned | No | pending official source verification |
-| ProtectionStones | upstream-fork | experimental | No | [Code](https://github.com/CyoriaSMP-Team/ProtectionStones-Folia) |
+| ProtectionStones | upstream-fork | experimental | Yes | [Release](https://github.com/CyoriaSMP-Team/ProtectionStones-Folia/releases/tag/v2.10.7-folia.1) |
 | ProtectionStonesMenu | third-party | planned | No | pending official source verification |
 | ProtocolLib2PacketEvents | upstream-fork | planned | No | [Code](https://github.com/CyoriaSMP-Team/ProtocolLib2PacketEvents) |
 | RedeemDialog | third-party | planned | No | pending official source verification |

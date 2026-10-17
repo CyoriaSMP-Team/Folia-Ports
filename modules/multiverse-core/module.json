@@ -7,5 +7,5 @@
   "source": "https://github.com/CyoriaSMP-Team/Multiverse-Core-Folia",
   "target": "Folia 1.21.11",
   "build_proves_folia_safety": false,
-  "notes": "Artifact folia-1.21.11-17 from commit 7e5a7076 passed 183 tests and enabled on Folia 1.21.11 build 14. Its autoload guard skips unsupported Bukkit world creation; MoreFoWorld currently supplies the lobby load. All 19 lobby NPCs loaded. Import/unload/remove/regenerate, portal, teleport, command queue, and multi-region ownership remain experimental."
+  "notes": "Artifact folia-1.21.11-17 from commit 7e5a7076 passed 183 tests and enabled on Folia 1.21.11 build 14. MoreFoWorld supplies existing lobby loading, but live `/mv create ps-folia-smoke normal` still throws UnsupportedOperationException from Bukkit.createWorld. Dynamic world creation is unavailable on this Folia build. Import/unload/remove/regenerate, portal, teleport, command queue, and multi-region ownership remain experimental."
 }

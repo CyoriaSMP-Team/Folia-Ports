@@ -33,7 +33,7 @@ This registry is not a claim that every listed plugin is safe. **Runtime tests o
 | InteractiveChat | third-party | blocked | Yes | pending official source verification |
 | InteractiveChatDiscordSrvAddon | third-party | blocked | Yes | pending official source verification |
 | ItemEdit | third-party | active | Yes | pending official source verification |
-| ItemTag | third-party | active | Yes | pending official source verification |
+| ItemTag | upstream-fork | blocked | Yes | [Code](https://github.com/CyoriaSMP-Team/ItemTag-Folia) |
 | Kalo | third-party | active | Yes | pending official source verification |
 | LuckPerms | third-party | active | Yes | pending official source verification |
 | MiniMOTD | third-party | active | Yes | pending official source verification |
@@ -118,7 +118,7 @@ This registry is not a claim that every listed plugin is safe. **Runtime tests o
 | WorldGuard | upstream-fork | planned | No | [Code](https://github.com/CyoriaSMP-Team/WorldGuard-Folia) |
 | WorldGuardExtraFlags | third-party | planned | No | pending official source verification |
 
-**Tracked modules: 113. Installed: 67. Experimental/blocked: 10.**
+**Tracked modules: 113. Installed: 67. Experimental/blocked: 11.**
 
 ### Rules
 - Prefer verified official Folia releases and retain original license/credits.

@@ -4,8 +4,8 @@
   "type": "third-party",
   "state": "planned",
   "installed_on_folia": false,
-  "source": "pending official source verification",
-  "target": "Folia 1.21.11",
+  "source": "https://github.com/FluffyworldMC/ExcellentCrates-v7-folia",
+  "target": "Folia 26.2 (Java 25)",
   "build_proves_folia_safety": false,
-  "notes": "Folia support not declared"
+  "notes": "Official ExcellentCrates 7.2.0 supports Paper/Spigot 26.2, not Folia. Community Folia v7 fork is 7.1.0 and compiles against Paper API 26.1.2; no verified 26.2 artifact or runtime tests. Requires compatible NightCore. See PORTING_26_2.md."
 }

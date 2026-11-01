@@ -18,7 +18,11 @@ mods.sort(key=lambda m:(not m['installed_on_folia'],m['name'].lower()))
 rows=['# CyoriaSMP Folia 1.21.11 module catalog','','This registry is not a claim that every listed plugin is safe. **Runtime tests outrank `folia-supported` flags and CI green checks.** The presence of a plugin JAR does not mean it enabled or works correctly.','','| Module | Type | Current state | Plugin JAR present? | Source / work |','|---|---|---|---|---|']
 for m in mods:
     src=m['source']
-    if src.startswith('https://'):
+    display=m.get('catalog_display')
+    if display is not None:
+        assert isinstance(display,str) and display and '|' not in display and '\\n' not in display, (m['slug'],'catalog_display')
+        link=display
+    elif src.startswith('https://'):
         label='Release' if '/releases/tag/' in src else 'Code'
         link=f'[{label}]({src})'
     else:

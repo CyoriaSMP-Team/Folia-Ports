@@ -20,7 +20,7 @@ for m in mods:
     src=m['source']
     display=m.get('catalog_display')
     if display is not None:
-        assert isinstance(display,str) and display and '|' not in display and '\\n' not in display, (m['slug'],'catalog_display')
+        assert isinstance(display,str) and display and '|' not in display and '\n' not in display, (m['slug'],'catalog_display')
         link=display
     elif src.startswith('https://'):
         label='Release' if '/releases/tag/' in src else 'Code'

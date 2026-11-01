@@ -32,6 +32,7 @@ jobs:
       changed: ${{ steps.merge.outputs.changed }}
       target_sha: ${{ steps.merge.outputs.target_sha }}
       upstream_sha: ${{ steps.merge.outputs.upstream_sha }}
+      verified_tree: ${{ steps.merge.outputs.verified_tree }}
     steps:
       - uses: actions/checkout@v7
         with:
@@ -64,13 +65,27 @@ jobs:
             } >> "$GITHUB_STEP_SUMMARY"
             exit 1
           fi
-          if [ "$(git rev-list --count "origin/$TARGET_BRANCH..HEAD")" -eq 0 ]; then
+          # Keep the fork's CI, runtime gates and release workflows unchanged.
+          # Upstream workflow edits cannot be pushed with the default GITHUB_TOKEN.
+          git restore --source="origin/$TARGET_BRANCH" --staged --worktree -- .github/workflows
+          if ! git diff --cached --quiet; then
+            git commit --amend --no-edit
+          fi
+          if ! git diff --quiet "origin/$TARGET_BRANCH" HEAD -- .github/workflows; then
+            echo 'Folia workflow preservation failed.' >&2
+            exit 1
+          fi
+          # Skript and other projects may require nested Git submodules to build.
+          git submodule sync --recursive
+          git submodule update --init --recursive
+          if git diff --quiet "origin/$TARGET_BRANCH" HEAD; then
             echo 'changed=false' >> "$GITHUB_OUTPUT"
             echo "No upstream changes for $UPSTREAM_REPO/$UPSTREAM_BRANCH." >> "$GITHUB_STEP_SUMMARY"
             exit 0
           fi
           echo "changed=true" >> "$GITHUB_OUTPUT"
           echo "upstream_sha=$upstream_sha" >> "$GITHUB_OUTPUT"
+          echo "verified_tree=$(git rev-parse HEAD^{tree})" >> "$GITHUB_OUTPUT"
           echo "Merged $UPSTREAM_REPO/$UPSTREAM_BRANCH at $upstream_sha into $TARGET_BRANCH." >> "$GITHUB_STEP_SUMMARY"
 
       - name: Set up Java for merged source
@@ -111,6 +126,7 @@ jobs:
           UPSTREAM_BRANCH: ${{ inputs.upstream_branch }}
           TARGET_SHA: ${{ needs.build.outputs.target_sha }}
           UPSTREAM_SHA: ${{ needs.build.outputs.upstream_sha }}
+          VERIFIED_TREE: ${{ needs.build.outputs.verified_tree }}
           SYNC_BRANCH: automation/upstream-sync
         shell: bash
         run: |
@@ -130,6 +146,14 @@ jobs:
             exit 1
           fi
           git merge --no-ff --no-edit FETCH_HEAD
+          git restore --source="origin/$TARGET_BRANCH" --staged --worktree -- .github/workflows
+          if ! git diff --cached --quiet; then
+            git commit --amend --no-edit
+          fi
+          if [ "$(git rev-parse HEAD^{tree})" != "$VERIFIED_TREE" ]; then
+            echo 'Publish tree differs from the exact source tree that passed build/test.' >&2
+            exit 1
+          fi
           gh auth setup-git
           if expected=$(git ls-remote origin "refs/heads/$SYNC_BRANCH" | awk 'NR == 1 { print $1 }') && [ -n "$expected" ]; then
             git push --force-with-lease="refs/heads/$SYNC_BRANCH:$expected" origin "HEAD:refs/heads/$SYNC_BRANCH"

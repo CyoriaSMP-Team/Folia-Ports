@@ -1,0 +1,32 @@
+name: Upstream sync merge safety test
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/upstream-sync.yml'
+      - '.github/workflows/upstream-sync-selftest.yml'
+      - 'tools/test_upstream_sync.sh'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  merge-safety:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Validate reusable workflow shell scripts
+        run: |
+          python3 -m pip install --quiet pyyaml
+          python3 - <<'PY'
+          import subprocess, yaml
+          with open('.github/workflows/upstream-sync.yml', encoding='utf-8') as f:
+              data = yaml.safe_load(f)
+          for job in data['jobs'].values():
+              for step in job['steps']:
+                  if 'run' in step:
+                      subprocess.run(['bash', '-n'], input=step['run'], text=True, check=True)
+          PY
+      - name: Verify merge and publish tree safety
+        run: bash tools/test_upstream_sync.sh

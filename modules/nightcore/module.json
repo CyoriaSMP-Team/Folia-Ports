@@ -7,5 +7,6 @@
   "source": "pending official source verification",
   "target": "Folia 1.21.11",
   "build_proves_folia_safety": false,
-  "notes": ""
+  "notes": "",
+  "catalog_display": "[Modrinth Folia release 2.16.7](https://modrinth.com/plugin/nightcore/version/2.16.7)"
 }

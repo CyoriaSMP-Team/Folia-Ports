@@ -7,5 +7,6 @@
   "source": "https://github.com/CyoriaSMP-Team/MoreFoWorld-Folia/tree/folia/1.21.11",
   "target": "Folia 1.21.11",
   "build_proves_folia_safety": false,
-  "notes": "Experimental release v1.13.4-folia.1 adds `createWorld(WorldCreator)` and is installed on Folia 1.21.11 build 14. MoreFoWorld loaded before CMI and added lobby; its API enabled live Multiverse create/import/load smokes on empty disposable worlds. Create exceeded Folia's 5-second global-region watchdog reporting threshold; import/load completed after about 37 seconds. Test world data is in rollback. Player RTP, teleports, portals, unload, and cross-region world lifecycle remain unverified. The implementation uses server internals and is not a production-safe general world lifecycle API."
+  "notes": "Experimental release v1.13.4-folia.1 adds `createWorld(WorldCreator)` and is installed on Folia 1.21.11 build 14. MoreFoWorld loaded before CMI and added lobby; its API enabled live Multiverse create/import/load smokes on empty disposable worlds. Create exceeded Folia's 5-second global-region watchdog reporting threshold; import/load completed after about 37 seconds. Test world data is in rollback. Player RTP, teleports, portals, unload, and cross-region world lifecycle remain unverified. The implementation uses server internals and is not a production-safe general world lifecycle API.",
+  "catalog_display": "[Release v1.13.4-folia.1](https://github.com/CyoriaSMP-Team/MoreFoWorld-Folia/releases/tag/v1.13.4-folia.1); live create/import/load smoke passed through Multiverse on empty test worlds"
 }

@@ -33,9 +33,9 @@ This registry is not a claim that every listed plugin is safe. **Runtime tests o
 | GrimAC | third-party | active | Yes | pending official source verification |
 | GSit | third-party | active | Yes | pending official source verification |
 | InteractiveChat | third-party | blocked | Yes | pending official source verification |
-| InteractiveChatDiscordSrvAddon | third-party | blocked | Yes | pending official source verification |
+| InteractiveChatDiscordSrvAddon | third-party | active | Yes | Local Cyoria CMI fork; `ImageDirectory` moved into the container volume 2026-11-24 |
 | ItemEdit | third-party | active | Yes | pending official source verification |
-| ItemTag | upstream-fork | experimental | Yes | [Code](https://github.com/CyoriaSMP-Team/ItemTag-Folia) |
+| ItemTag | official-folia | active | Yes | Official [ItemTag 4.0.1](https://modrinth.com/plugin/itemtag/version/4.0.1) (Folia, ItemEdit 4.0.0); replaced the 3.7.7 fork on 2026-11-24 |
 | Kalo | third-party | active | Yes | pending official source verification |
 | LuckPerms | third-party | active | Yes | pending official source verification |
 | MiniMOTD | third-party | active | Yes | pending official source verification |
